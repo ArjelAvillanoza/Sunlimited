@@ -14,7 +14,7 @@ const FOOTER_HTML = `
       <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
  <div class="flex items-center gap-2 mb-4">
   <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
-    <img src="SUNLIMITED PICS/wthout bg.png" alt="Company Logo" class="w-10 h-10 object-contain">
+    <img src="SUNLIMITED-PICS/wthout bg.png" alt="Company Logo" class="w-10 h-10 object-contain">
   </div>
 
   <span class="font-poppins font-800 text-white text-base">
@@ -253,130 +253,130 @@ const allProjects = [
   {
     id: 'hybrid-8kw-bacuit-tibag',
     title: '8kW Hybrid Solar Installation', loc: 'Bacuit, Tibag, Tarlac City',
-    savings: '₱9,200/mo', img: 'SUNLIMITED PICS/14.jpg',
+    savings: '₱9,200/mo', img: 'SUNLIMITED-PICS/14.jpg',
     panels: '16pcs 620W Jinko Bi-facial', battery: '330Ah Sunlimited LiFePO4',
-    images: ['SUNLIMITED PICS/14.jpg', 'SUNLIMITED PICS/PROJECT 15 SYSTEM.jpg'],
+    images: ['SUNLIMITED-PICS/14.jpg', 'SUNLIMITED-PICS/PROJECT 15 SYSTEM.jpg'],
     imageLabels: ['Installation Photo',  'Sungrow Inverter']
   },
   {
     id: 'hybrid-6kw-angeles',
     title: '6kW Hybrid Solar Installation', loc: 'Angeles, Pampanga',
-    savings: '₱6,900/mo', img: 'SUNLIMITED PICS/11.jpg',
+    savings: '₱6,900/mo', img: 'SUNLIMITED-PICS/11.jpg',
     panels: '12pcs 615W Trina Bi-facial', battery: '314Ah Alp Solar LiFePO4',
-    images: ['SUNLIMITED PICS/11.jpg', 'SUNLIMITED PICS/PROJECT 10 SYSTEM.jpg', ],
+    images: ['SUNLIMITED-PICS/11.jpg', 'SUNLIMITED-PICS/PROJECT 10 SYSTEM.jpg', ],
     imageLabels: ['Installation Photo', 'Sungrow Inverter', ]
   },
   {
     id: 'hybrid-8kw-balanga',
     title: '8kW Hybrid Solar Installation', loc: 'Balanga, Bataan',
-    savings: '₱8,800/mo', img: 'SUNLIMITED PICS/6.jpg',
+    savings: '₱8,800/mo', img: 'SUNLIMITED-PICS/6.jpg',
     panels: '12pcs 640W Jinko Bi-facial', battery: '400Ah JM LiFePO4',
-    images: ['SUNLIMITED PICS/6.jpg', 'SUNLIMITED PICS/PROJECT 7 SYSTEM.jpg',],
+    images: ['SUNLIMITED-PICS/6.jpg', 'SUNLIMITED-PICS/PROJECT 7 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter', ]
   },
   {
     title: '12kW  Hybrid Solar Installation', loc: 'Brgy. Ayao-Iyao Itaas, Lemery, Batangas',
-    savings: '₱15,200/mo', img: 'SUNLIMITED PICS/ PROJECT 1.JPG',
+    savings: '₱15,200/mo', img: 'SUNLIMITED-PICS/ PROJECT 1.JPG',
     panels: '18pcs 620W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 1.JPG','SUNLIMITED PICS/PROJECT 1 SYSTEM.jpg'],
+    images: ['SUNLIMITED-PICS/PROJECT 1.JPG','SUNLIMITED-PICS/PROJECT 1 SYSTEM.jpg'],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '8kw Hybrid Solar Installation', loc: 'Brgy. Matatalaib, Tarlac City',
-    savings: '₱9,100/mo', img: 'SUNLIMITED PICS/PROJECT 2.JPG',
+    savings: '₱9,100/mo', img: 'SUNLIMITED-PICS/PROJECT 2.JPG',
     panels: '16pcs 640W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 2.JPG','SUNLIMITED PICS/PROJECT 2 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 2.JPG','SUNLIMITED-PICS/PROJECT 2 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '6kw Sungrow Hybrid Solar Installation', loc: 'Brgy. Magaspac, Gerona',
-    savings: '₱6,400/mo', img: 'SUNLIMITED PICS/PROJECT 3.JPG',
+    savings: '₱6,400/mo', img: 'SUNLIMITED-PICS/PROJECT 3.JPG',
     panels: '8pcs 640W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 3.JPG','SUNLIMITED PICS/PROJECT 3 SYSTEM.JPG'],
+    images: ['SUNLIMITED-PICS/PROJECT 3.JPG','SUNLIMITED-PICS/PROJECT 3 SYSTEM.JPG'],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '6kw Sungrow Hybrid Solar Installation', loc: 'Brgy. Magaspac, Gerona',
-    savings: '₱6,400/mo', img: 'SUNLIMITED PICS/PROJECT 4.JPG',
+    savings: '₱6,400/mo', img: 'SUNLIMITED-PICS/PROJECT 4.JPG',
     panels: '8pcs 640W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 4.JPG','SUNLIMITED PICS/PROJECT 4 SYSTEM.JPG'],
+    images: ['SUNLIMITED-PICS/PROJECT 4.JPG','SUNLIMITED-PICS/PROJECT 4 SYSTEM.JPG'],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '10kW Sungrow Hybrid Solar Installation', loc: 'Brgy. Maliwalo, Tarlac City',
-    savings: '₱12,300/mo', img: 'SUNLIMITED PICS/PROJECT 5.JPG',
+    savings: '₱12,300/mo', img: 'SUNLIMITED-PICS/PROJECT 5.JPG',
     panels: '16pcs 640W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 5.JPG','SUNLIMITED PICS/PROJECT 5 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 5.JPG','SUNLIMITED-PICS/PROJECT 5 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '12kW Sungrow Hybrid Solar Installation', loc: 'Brgy. San Antonio, Gerona, Tarlac',
-    savings: '₱15,800/mo', img: 'SUNLIMITED PICS/PROJECT 66.JPG',
+    savings: '₱15,800/mo', img: 'SUNLIMITED-PICS/PROJECT 66.JPG',
     panels: '24pcs 640W Jinko Bi-facial Solar Panels', battery: '2pcs 314Ah Sungrow LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 66.JPG','SUNLIMITED PICS/PROJECT 6 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 66.JPG','SUNLIMITED-PICS/PROJECT 6 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '2pcs 8kW Sungrow Hybrid Solar Installation', loc: 'San Fernando, Pampanga',
-    savings: '₱21,800/mo', img: 'SUNLIMITED PICS/PROJECT 16.JPG',
+    savings: '₱21,800/mo', img: 'SUNLIMITED-PICS/PROJECT 16.JPG',
     panels: '36pcs 630W Seraphim Bi-facial Solar Panels', battery: '3pcs 314Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 16.JPG','SUNLIMITED PICS/PROJECT 16 SYSTEM.JPG'],
+    images: ['SUNLIMITED-PICS/PROJECT 16.JPG','SUNLIMITED-PICS/PROJECT 16 SYSTEM.JPG'],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '6kW Sungrow Hybrid Solar Installation', loc: 'Brgy. Tibag, Tarlac City',
-    savings: '₱8,800/mo', img: 'SUNLIMITED PICS/PROJECT 8.JPG',
+    savings: '₱8,800/mo', img: 'SUNLIMITED-PICS/PROJECT 8.JPG',
     panels: '6pcs 585W JA Bi-facial Solar Panels', battery: '200Ah OLiter LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 8.JPG','SUNLIMITED PICS/PROJECT 8 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 8.JPG','SUNLIMITED-PICS/PROJECT 8 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '10kW Sungrow Hybrid Solar Installation', loc: 'Tuscani Subd., Burot, Tarlac City',
-    savings: '₱12,300/mo', img: 'SUNLIMITED PICS/PROJECT 9.JPG',
+    savings: '₱12,300/mo', img: 'SUNLIMITED-PICS/PROJECT 9.JPG',
     panels: '16pcs 640W Jinko Bi-facial Solar Panels', battery: '314Ah COOLi LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 9.JPG','SUNLIMITED PICS/PROJECT 9 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 9.JPG','SUNLIMITED-PICS/PROJECT 9 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '8kW Sungrow Hybrid Solar Installation', loc: 'Sta. Maria, Bulacan',
-    savings: '₱9,000/mo', img: 'SUNLIMITED PICS/PROJECT 17.JPG',
+    savings: '₱9,000/mo', img: 'SUNLIMITED-PICS/PROJECT 17.JPG',
     panels: '16pcs 630W Seraphim Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 17.JPG','SUNLIMITED PICS/PROJECT 17 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 17.JPG','SUNLIMITED-PICS/PROJECT 17 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '8kW Sungrow Hybrid Solar Installation', loc: 'San Vicente, Victoria, Tarlac',
-    savings: '₱7,200/mo', img: 'SUNLIMITED PICS/PROJECT 11.JPG',
+    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 11.JPG',
     panels: '12pcs 615W Trina Bi-facial Solar Panels', battery: '314Ah Alp Solar LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 11.JPG','SUNLIMITED PICS/PROJECT 11 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 11.JPG','SUNLIMITED-PICS/PROJECT 11 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
     {
     title: '2x10kW Sungrow Hybrid Solar Installation', loc: 'Magalang, Pampanga',
-    savings: '₱7,200/mo', img: 'SUNLIMITED PICS/PROJECT 12.JPG',
+    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 12.JPG',
     panels: '40pcs 615W Trina Bi-facial Solar Panels', battery: '4pcs 314Ah Alp Solar LiFePO4 ',
-    images: ['SUNLIMITED PICS/PROJECT 12.JPG','SUNLIMITED PICS/PROJECT 12 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 12.JPG','SUNLIMITED-PICS/PROJECT 12 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
     {
     title: '10kW Sungrow Hybrid Solar Installation', loc: 'San Isidro, Tarlac City',
-    savings: '₱7,200/mo', img: 'SUNLIMITED PICS/PROJECT 13.JPG',
+    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 13.JPG',
     panels: '21pcs 585W JA Bi-facial Solar Panels', battery: '314Ah Dongjin LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 13.JPG','SUNLIMITED PICS/PROJECT 13 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 13.JPG','SUNLIMITED-PICS/PROJECT 13 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
     {
     title: '10kW Sungrow Hybrid Solar Installation', loc: 'Awag, Anda, Pangasinan',
-    savings: '₱7,200/mo', img: 'SUNLIMITED PICS/PROJECT 14.JPG',
+    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 14.JPG',
     panels: '24pcs 585W JA Bi-facial Solar Panels', battery: '3pcs 314Ah Menred LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 14.JPG','SUNLIMITED PICS/PROJECT 14 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 14.JPG','SUNLIMITED-PICS/PROJECT 14 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
     {
     title: '8kW Sungrow Hybrid Solar Installation', loc: 'Milasin 1st, Pura, Tarlac',
-    savings: '₱8,900/mo', img: 'SUNLIMITED PICS/PROJECT 18.JPG',
+    savings: '₱8,900/mo', img: 'SUNLIMITED-PICS/PROJECT 18.JPG',
     panels: '16pcs 630W Seraphim Bi-facial Solar Panels', battery: '314Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED PICS/PROJECT 18.JPG','SUNLIMITED PICS/PROJECT 18 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 18.JPG','SUNLIMITED-PICS/PROJECT 18 SYSTEM.JPG',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
 
@@ -983,7 +983,7 @@ const SERVICE_DETAILS = {
       'System testing and activation',
       'Post-installation support'
     ],
-    image: 'SUNLIMITED PICS/19.jpg',
+    image: 'SUNLIMITED-PICS/19.jpg',
     icon: `<svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#F5A800"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" fill="none" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/></svg>`
   },
   'sungrow-distributor': {
@@ -1012,7 +1012,7 @@ const SERVICE_DETAILS = {
       'Battery installation and commissioning',
       'Ongoing performance monitoring'
     ],
-    image: 'SUNLIMITED PICS/24.jpg',
+    image: 'SUNLIMITED-PICS/24.jpg',
     icon: `<svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="11" rx="2" fill="none" stroke="#F5A800" stroke-width="2"/><path d="M22 11v3" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/><path d="M6 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" fill="none" stroke="#F5A800" stroke-width="2"/><line x1="7" y1="12" x2="7" y2="14" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/><line x1="11" y1="12" x2="11" y2="14" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/></svg>`
   },
   'warranty-support': {
@@ -1027,7 +1027,7 @@ const SERVICE_DETAILS = {
       'System performance reviews',
       'Dedicated customer support line'
     ],
-    image: 'SUNLIMITED PICS/21.jpg',
+    image: 'SUNLIMITED-PICS/21.jpg',
     icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5A800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`
   }
 };
