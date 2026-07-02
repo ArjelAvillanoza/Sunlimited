@@ -290,93 +290,93 @@ const allProjects = [
   },
   {
     title: '6kw Sungrow Hybrid Solar Installation', loc: 'Brgy. Magaspac, Gerona',
-    savings: '₱6,400/mo', img: 'SUNLIMITED-PICS/PROJECT 3.JPG',
+    savings: '₱6,400/mo', img: 'SUNLIMITED-PICS/PROJECT 3.jpg',
     panels: '8pcs 640W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 3.JPG','SUNLIMITED-PICS/PROJECT 3 SYSTEM.JPG'],
+    images: ['SUNLIMITED-PICS/PROJECT 3.jpg','SUNLIMITED-PICS/PROJECT 3 SYSTEM.jpg'],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '6kw Sungrow Hybrid Solar Installation', loc: 'Brgy. Magaspac, Gerona',
-    savings: '₱6,400/mo', img: 'SUNLIMITED-PICS/PROJECT 4.JPG',
+    savings: '₱6,400/mo', img: 'SUNLIMITED-PICS/PROJECT 4.jpg',
     panels: '8pcs 640W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 4.JPG','SUNLIMITED-PICS/PROJECT 4 SYSTEM.JPG'],
+    images: ['SUNLIMITED-PICS/PROJECT 4.jpg','SUNLIMITED-PICS/PROJECT 4 SYSTEM.jpg'],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '10kW Sungrow Hybrid Solar Installation', loc: 'Brgy. Maliwalo, Tarlac City',
-    savings: '₱12,300/mo', img: 'SUNLIMITED-PICS/PROJECT 5.JPG',
+    savings: '₱12,300/mo', img: 'SUNLIMITED-PICS/PROJECT 5.jpg',
     panels: '16pcs 640W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 5.JPG','SUNLIMITED-PICS/PROJECT 5 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 5.jpg','SUNLIMITED-PICS/PROJECT 5 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '12kW Sungrow Hybrid Solar Installation', loc: 'Brgy. San Antonio, Gerona, Tarlac',
-    savings: '₱15,800/mo', img: 'SUNLIMITED-PICS/PROJECT 66.JPG',
+    savings: '₱15,800/mo', img: 'SUNLIMITED-PICS/PROJECT 66.jpg',
     panels: '24pcs 640W Jinko Bi-facial Solar Panels', battery: '2pcs 314Ah Sungrow LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 66.JPG','SUNLIMITED-PICS/PROJECT 6 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 66.jpg','SUNLIMITED-PICS/PROJECT 6 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '2pcs 8kW Sungrow Hybrid Solar Installation', loc: 'San Fernando, Pampanga',
-    savings: '₱21,800/mo', img: 'SUNLIMITED-PICS/PROJECT 16.JPG',
+    savings: '₱21,800/mo', img: 'SUNLIMITED-PICS/PROJECT 16.jpg',
     panels: '36pcs 630W Seraphim Bi-facial Solar Panels', battery: '3pcs 314Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 16.JPG','SUNLIMITED-PICS/PROJECT 16 SYSTEM.JPG'],
+    images: ['SUNLIMITED-PICS/PROJECT 16.jpg','SUNLIMITED-PICS/PROJECT 16 SYSTEM.jpg'],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '6kW Sungrow Hybrid Solar Installation', loc: 'Brgy. Tibag, Tarlac City',
-    savings: '₱8,800/mo', img: 'SUNLIMITED-PICS/PROJECT 8.JPG',
+    savings: '₱8,800/mo', img: 'SUNLIMITED-PICS/PROJECT 8.jpg',
     panels: '6pcs 585W JA Bi-facial Solar Panels', battery: '200Ah OLiter LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 8.JPG','SUNLIMITED-PICS/PROJECT 8 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 8.jpg','SUNLIMITED-PICS/PROJECT 8 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '10kW Sungrow Hybrid Solar Installation', loc: 'Tuscani Subd., Burot, Tarlac City',
-    savings: '₱12,300/mo', img: 'SUNLIMITED-PICS/PROJECT 9.JPG',
+    savings: '₱12,300/mo', img: 'SUNLIMITED-PICS/PROJECT 9.jpg',
     panels: '16pcs 640W Jinko Bi-facial Solar Panels', battery: '314Ah COOLi LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 9.JPG','SUNLIMITED-PICS/PROJECT 9 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 9.jpg','SUNLIMITED-PICS/PROJECT 9 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '8kW Sungrow Hybrid Solar Installation', loc: 'Sta. Maria, Bulacan',
-    savings: '₱9,000/mo', img: 'SUNLIMITED-PICS/PROJECT 17.JPG',
+    savings: '₱9,000/mo', img: 'SUNLIMITED-PICS/PROJECT 17.jpg',
     panels: '16pcs 630W Seraphim Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 17.JPG','SUNLIMITED-PICS/PROJECT 17 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 17.jpg','SUNLIMITED-PICS/PROJECT 17 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '8kW Sungrow Hybrid Solar Installation', loc: 'San Vicente, Victoria, Tarlac',
-    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 11.JPG',
+    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 11.jpg',
     panels: '12pcs 615W Trina Bi-facial Solar Panels', battery: '314Ah Alp Solar LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 11.JPG','SUNLIMITED-PICS/PROJECT 11 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 11.jpg','SUNLIMITED-PICS/PROJECT 11 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
     {
     title: '2x10kW Sungrow Hybrid Solar Installation', loc: 'Magalang, Pampanga',
-    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 12.JPG',
+    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 12.jpg',
     panels: '40pcs 615W Trina Bi-facial Solar Panels', battery: '4pcs 314Ah Alp Solar LiFePO4 ',
-    images: ['SUNLIMITED-PICS/PROJECT 12.JPG','SUNLIMITED-PICS/PROJECT 12 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 12.jpg','SUNLIMITED-PICS/PROJECT 12 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
     {
     title: '10kW Sungrow Hybrid Solar Installation', loc: 'San Isidro, Tarlac City',
-    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 13.JPG',
+    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 13.jpg',
     panels: '21pcs 585W JA Bi-facial Solar Panels', battery: '314Ah Dongjin LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 13.JPG','SUNLIMITED-PICS/PROJECT 13 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 13.jpg','SUNLIMITED-PICS/PROJECT 13 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
     {
     title: '10kW Sungrow Hybrid Solar Installation', loc: 'Awag, Anda, Pangasinan',
-    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 14.JPG',
+    savings: '₱7,200/mo', img: 'SUNLIMITED-PICS/PROJECT 14.jpg',
     panels: '24pcs 585W JA Bi-facial Solar Panels', battery: '3pcs 314Ah Menred LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 14.JPG','SUNLIMITED-PICS/PROJECT 14 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 14.jpg','SUNLIMITED-PICS/PROJECT 14 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
     {
     title: '8kW Sungrow Hybrid Solar Installation', loc: 'Milasin 1st, Pura, Tarlac',
-    savings: '₱8,900/mo', img: 'SUNLIMITED-PICS/PROJECT 18.JPG',
+    savings: '₱8,900/mo', img: 'SUNLIMITED-PICS/PROJECT 18.jpg',
     panels: '16pcs 630W Seraphim Bi-facial Solar Panels', battery: '314Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 18.JPG','SUNLIMITED-PICS/PROJECT 18 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 18.jpg','SUNLIMITED-PICS/PROJECT 18 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
 
