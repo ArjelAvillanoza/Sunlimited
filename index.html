@@ -1,0 +1,2518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SunLimited — Sun is the limit!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white text-gray-700">
+    <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+    <nav id="navbar">
+      <div class="nav-inner flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <button
+          onclick="showPage('home')"
+          class="flex items-center gap-2.5 flex-shrink-0"
+        >
+          <div
+            class="w-12 h-12 lg:w-9 lg:h-9 bg-white rounded-full flex items-center justify-center"
+          >
+            <img
+              src="SUNLIMITED PICS/wthout bg.png"
+              alt="Company Logo"
+              class="w-10 h-10"
+            />
+          </div>
+          <div class="text-left">
+            <div
+              class="font-poppins font-800 text-base text-white leading-none"
+            >
+              SUN<span class="text-amber-400">LIMITED</span>
+            </div>
+            <div class="text-xs text-white/40 leading-none mt-0.5">
+              Sun is the limit.
+            </div>
+          </div>
+        </button>
+
+        <!-- Desktop links -->
+        <div class="hidden lg:flex items-center gap-1">
+          <button onclick="showPage('home')" class="nav-link" id="nav-home">
+            Home
+          </button>
+          <button onclick="showPage('about')" class="nav-link" id="nav-about">
+            About Us
+          </button>
+          <button
+            onclick="showPage('services')"
+            class="nav-link"
+            id="nav-services"
+          >
+            Services
+          </button>
+          <button
+            onclick="showPage('reviews')"
+            class="nav-link"
+            id="nav-reviews"
+          >
+            Reviews
+          </button>
+          <button
+            onclick="showPage('projects')"
+            class="nav-link"
+            id="nav-projects"
+          >
+            Past Projects
+          </button>
+          <button
+            onclick="showPage('contact')"
+            class="nav-link"
+            id="nav-contact"
+          >
+            Contact
+          </button>
+        </div>
+
+        <button onclick="showPage('contact')" class="hidden lg:flex btn-gold">
+          Get a Free Quote
+          <svg
+            class="w-3.5 h-3.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Hamburger -->
+        <button id="hamburger" class="lg:hidden p-2" onclick="toggleMobile()">
+          <div class="space-y-1.5">
+            <span class="block w-6 h-0.5 bg-white rounded"></span
+            ><span class="block w-6 h-0.5 bg-white rounded"></span
+            ><span class="block w-6 h-0.5 bg-white rounded"></span>
+          </div>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div
+      id="mobileNav"
+      class="mobile-nav fixed top-0 right-0 h-screen w-72 bg-gray-900 z-[10001] pt-24 px-6 pb-8 flex flex-col gap-2 shadow-2xl overflow-y-auto"
+    >
+      <button
+        onclick="toggleMobile()"
+        class="absolute top-4 right-4 text-white/60 hover:text-white text-2xl"
+      >
+        ✕
+      </button>
+      <button
+        onclick="
+          showPage('home');
+          toggleMobile();
+        "
+        class="mobile-nav-link text-left text-white/80 py-3 border-b border-white/10 font-poppins font-600 text-sm"
+      >
+        Home
+      </button>
+      <button
+        onclick="
+          showPage('about');
+          toggleMobile();
+        "
+        class="mobile-nav-link text-left text-white/80 py-3 border-b border-white/10 font-poppins font-600 text-sm"
+      >
+        About Us
+      </button>
+      <button
+        onclick="
+          showPage('services');
+          toggleMobile();
+        "
+        class="mobile-nav-link text-left text-white/80 py-3 border-b border-white/10 font-poppins font-600 text-sm"
+      >
+        Services
+      </button>
+      <button
+        onclick="
+          showPage('reviews');
+          toggleMobile();
+        "
+        class="mobile-nav-link text-left text-white/80 py-3 border-b border-white/10 font-poppins font-600 text-sm"
+      >
+        Reviews
+      </button>
+      <button
+        onclick="
+          showPage('projects');
+          toggleMobile();
+        "
+        class="mobile-nav-link text-left text-white/80 py-3 border-b border-white/10 font-poppins font-600 text-sm"
+      >
+        Past Projects
+      </button>
+      <button
+        onclick="
+          showPage('contact');
+          toggleMobile();
+        "
+        class="mobile-nav-link text-left text-white/80 py-3 border-b border-white/10 font-poppins font-600 text-sm"
+      >
+        Contact
+      </button>
+      <button
+        onclick="
+          showPage('contact');
+          toggleMobile();
+        "
+        class="btn-gold mt-4"
+      >
+        Get a Free Quote
+      </button>
+    </div>
+    <div
+      id="mobileOverlay"
+      class="fixed inset-0 bg-black/50 z-40 hidden"
+      onclick="toggleMobile()"
+    ></div>
+
+<!-- ══════════════════════════════════════════════
+     PAGE 1: HOME
+══════════════════════════════════════════════ -->
+    <div id="page-home" class="page active">
+      <!-- HERO -->
+      <section
+        class="relative min-h-screen flex items-center"
+        style="
+          background: url(&quot;SUNLIMITED PICS/sungrow.jpg &quot;) center/cover
+            no-repeat;
+        "
+      >
+        <div class="hero-overlay absolute inset-0"></div>
+        <div
+          class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 w-full"
+          style="padding-top: 120px"
+        >
+          <div class="max-w-2xl">
+            <div class="flex items-center gap-2 mb-5 reveal">
+              <div
+                class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"
+              ></div>
+              <span
+                class="text-amber-500 font-poppins font-700 text-xs tracking-widest uppercase"
+                >Clean Energy. Better Tomorrow.</span
+              >
+            </div>
+
+            <h1
+              class="font-poppins text-white leading-none mb-6 reveal"
+              style="
+                font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+                font-weight: 750;
+                letter-spacing: -0.04em;
+                line-height: 0.92;
+                transition-delay: 0.05s;
+              "
+            >
+              Harness The <span class="text-amber-500">Sun.</span><br />
+              Power Your <span class="text-amber-500">Future.</span>
+            </h1>
+            <p
+              class="text-white/75 text-base leading-relaxed mb-8 max-w-lg reveal"
+              style="transition-delay: 0.1s"
+            >
+              We provide reliable and affordable solar energy solutions for
+              homes, businesses, and a sustainable future.
+            </p>
+            <div
+              class="flex flex-wrap gap-3 mb-12 reveal"
+              style="transition-delay: 0.15s"
+            >
+              <!--<button onclick="showPage('contact')" class="btn-gold">Get a Free Quote</button>-->
+              <button onclick="showPage('services')" class="btn-outline-w">
+                How It Works
+              </button>
+            </div>
+            <!-- Stats -->
+            <div
+              class="grid grid-cols-2 sm:grid-cols-4 gap-3 reveal"
+              style="transition-delay: 0.2s"
+            >
+              <div class="stat-card">
+                <div class="font-poppins font-900 text-2xl text-amber-500">
+                  150+
+                </div>
+                <div class="text-white/50 text-xs mt-1">Projects Completed</div>
+              </div>
+              <div class="stat-card">
+                <div class="font-poppins font-900 text-2xl text-amber-500">
+                  150+
+                </div>
+                <div class="text-white/50 text-xs mt-1">Happy Clients</div>
+              </div>
+              <div class="stat-card">
+                <div class="font-poppins font-900 text-2xl text-amber-500">
+                  4
+                </div>
+                <div class="text-white/50 text-xs mt-1">Years Experience</div>
+              </div>
+              <div class="stat-card">
+                <div class="font-poppins font-900 text-2xl text-amber-500">
+                  ✓
+                </div>
+                <div class="text-white/50 text-xs mt-1">
+                  Licensed &amp; Certified
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US STRIP -->
+      <div class="why-strip">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="why-item flex items-center gap-3">
+              <div class="text-2xl">⚡</div>
+              <div>
+                <div class="text-white font-poppins font-700 text-sm">
+                  Clean Energy
+                </div>
+                <div class="text-white/45 text-xs mt-0.5">
+                  For a better planet
+                </div>
+              </div>
+            </div>
+            <div class="why-item flex items-center gap-3">
+              <div class="text-2xl">💰</div>
+              <div>
+                <div class="text-white font-poppins font-700 text-sm">
+                  Lower Bills
+                </div>
+                <div class="text-white/45 text-xs mt-0.5">
+                  Save more every month
+                </div>
+              </div>
+            </div>
+            <div class="why-item flex items-center gap-3">
+              <div class="text-2xl">🔋</div>
+              <div>
+                <div class="text-white font-poppins font-700 text-sm">
+                  Reliable Solutions
+                </div>
+                <div class="text-white/45 text-xs mt-0.5">Built to last</div>
+              </div>
+            </div>
+            <div class="why-item flex items-center gap-3">
+              <div class="text-2xl">🤝</div>
+              <div>
+                <div class="text-white font-poppins font-700 text-sm">
+                  Trusted by 150+
+                </div>
+                <div class="text-white/45 text-xs mt-0.5">Happy Customers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHY CHOOSE SUNLIMITED -->
+      <section class="why-section">
+        <div class="why-wave-gradient"></div>
+        <svg
+          class="why-wave-svg"
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z"
+            fill="#F5C518"
+            fill-opacity="0.15"
+          />
+          <path
+            d="M0,80 C400,20 1040,100 1440,40 L1440,120 L0,120 Z"
+            fill="#F5C518"
+            fill-opacity="0.25"
+          />
+        </svg>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 why-content">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            <!-- Left: Text -->
+            <div class="reveal">
+              <div class="eyebrow mb-2">Why Choose SunLimited</div>
+              <h2 class="section-title mb-4">
+                We're Committed To<br />A
+                <span class="text-yellow-500">Better Tomorrow</span>
+              </h2>
+              <div class="gold-bar mb-6"></div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                We deliver high-quality solar solutions that reduce electricity
+                costs and protect the environment. As an official Sungrow
+                distributor, we bring world-class products to every
+                installation.
+              </p>
+
+              <div class="space-y-3 mb-8">
+                <div class="why-feature-card">
+                  <div class="why-feature-icon gold">🏅</div>
+                  <div>
+                    <div class="why-feature-title">Quality Beyond Words</div>
+                    <div class="why-feature-desc">
+                      We use only tested, durable components and follow strict
+                      safety standards
+                    </div>
+                  </div>
+                </div>
+                <div class="why-feature-card">
+                  <div class="why-feature-icon blue">🤝</div>
+                  <div>
+                    <div class="why-feature-title">Transparent Process</div>
+                    <div class="why-feature-desc">
+                      No hidden fees; clear timeline and scope of work
+                    </div>
+                  </div>
+                </div>
+                <div class="why-feature-card">
+                  <div class="why-feature-icon green">👨‍🔧</div>
+                  <div>
+                    <div class="why-feature-title">Expert Team</div>
+                    <div class="why-feature-desc">
+                      Certified and experienced installers with hands-on
+                      training
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button onclick="showPage('about')" class="btn-gold">
+                Learn more about us →
+              </button>
+            </div>
+
+            <!-- Right: Image — hidden on mobile, shown on desktop -->
+            <div class="why-image-col reveal" style="transition-delay: 0.1s">
+              <div class="why-image-wrap">
+                <img src="SUNLIMITED PICS/13.jpg" alt="Solar Installation" />
+                <div class="why-badge-exp">
+                  <div class="badge-number">4</div>
+                  <div class="badge-label">Years of Experience</div>
+                </div>
+                <div class="why-badge-projects">
+                  <div class="badge-number">150+</div>
+                  <div class="badge-label">Projects</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR SERVICES PREVIEW -->
+      <section class="services-section">
+        <div class="services-bg-circle-tl"></div>
+        <div class="services-bg-circle-br"></div>
+        <div class="services-bg-circle-tr"></div>
+        <div class="services-sparkle services-sparkle-1">✦</div>
+        <div class="services-sparkle services-sparkle-2">✦</div>
+        <div class="services-sparkle services-sparkle-3">+</div>
+        <div class="services-sparkle services-sparkle-4">+</div>
+        <svg
+          class="services-wave"
+          viewBox="0 0 1440 100"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,40 C360,100 1080,0 1440,50 L1440,100 L0,100 Z"
+            fill="#F5A800"
+            fill-opacity="0.1"
+          />
+          <path
+            d="M0,60 C480,10 960,90 1440,30 L1440,100 L0,100 Z"
+            fill="#F5A800"
+            fill-opacity="0.15"
+          />
+        </svg>
+
+        <div class="services-content max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-10 reveal">
+            <div class="eyebrow mb-2">Our Services</div>
+            <h2 class="section-title">
+              Smart Solar Solutions<br /><span class="text-yellow-500"
+                >For Every Need</span
+              >
+            </h2>
+            <div class="gold-bar mx-auto mt-4"></div>
+          </div>
+
+          <!-- Mobile: vertical list. Tablet+: 2 cols. Desktop: 4 cols -->
+          <div class="services-grid">
+            <div class="service-card-mobile reveal">
+              <div class="service-card-mobile-icon">☀️</div>
+              <div class="service-card-mobile-text">
+                <h3 class="service-card-mobile-title">
+                  Residential Solar Systems
+                </h3>
+                <p class="service-card-mobile-desc">
+                  Custom solar installations designed to reduce electricity
+                  costs and power your home efficiently.
+                </p>
+              </div>
+            </div>
+            <div
+              class="service-card-mobile reveal"
+              style="transition-delay: 0.07s"
+            >
+              <div class="service-card-mobile-icon">🔋</div>
+              <div class="service-card-mobile-text">
+                <h3 class="service-card-mobile-title">
+                  Grid-Tied, Off-Grid & Hybrid Systems
+                </h3>
+                <p class="service-card-mobile-desc">
+                  Flexible solar solutions for homes and businesses, whether
+                  connected to the grid or fully independent.
+                </p>
+              </div>
+            </div>
+            <div
+              class="service-card-mobile reveal"
+              style="transition-delay: 0.14s"
+            >
+              <div class="service-card-mobile-icon">📐</div>
+              <div class="service-card-mobile-text">
+                <h3 class="service-card-mobile-title">
+                  System Design & Consultation
+                </h3>
+                <p class="service-card-mobile-desc">
+                  Free site assessment, energy analysis, and customized solar
+                  system recommendations.
+                </p>
+              </div>
+            </div>
+            <div
+              class="service-card-mobile reveal"
+              style="transition-delay: 0.21s"
+            >
+              <div class="service-card-mobile-icon">⚡</div>
+              <div class="service-card-mobile-text">
+                <h3 class="service-card-mobile-title">
+                  Quality Equipment Supply
+                </h3>
+                <p class="service-card-mobile-desc">
+                  Genuine Sungrow inverters, batteries, solar panels, and
+                  premium accessories.
+                </p>
+              </div>
+            </div>
+          </div>
+            <div class="services-content flex justify-center mt-8">
+          <button onclick="showPage('services')" class="btn-gold">
+            Explore Our Services →
+          </button>
+        </div>
+        </div>
+        
+
+
+      </section>
+
+      <!-- OUR PROCESS PREVIEW -->
+      <section class="process-section">
+        <svg
+          class="services-wave"
+          viewBox="0 0 1440 100"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,40 C360,100 1080,0 1440,50 L1440,100 L0,100 Z"
+            fill="#F5A800"
+            fill-opacity="0.1"
+          />
+          <path
+            d="M0,60 C480,10 960,90 1440,30 L1440,100 L0,100 Z"
+            fill="#F5A800"
+            fill-opacity="0.15"
+          />
+        </svg>
+
+        <div class="process-geo process-geo-1"></div>
+        <div class="process-geo process-geo-2"></div>
+        <div class="process-geo process-geo-3"></div>
+        <div class="process-geo process-geo-4"></div>
+        <div class="process-geo process-geo-5"></div>
+        <div class="process-geo process-geo-6"></div>
+
+        <div class="process-content max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-12 reveal">
+            <div class="eyebrow mb-2">Our Process</div>
+            <h2 class="section-title">
+              Simple Steps,<br /><span class="text-yellow-500"
+                >Powerful Results</span
+              >
+            </h2>
+            <div class="gold-bar mx-auto mt-4"></div>
+          </div>
+
+          <div class="relative">
+            <!-- Timeline row — desktop only -->
+            <div class="hidden lg:flex items-center mb-8">
+              <div class="process-endpoint"></div>
+              <div class="flex-1 grid grid-cols-4 gap-8 relative">
+                <div class="process-line"></div>
+                <div class="flex justify-center">
+                  <div class="process-circle">01</div>
+                </div>
+                <div class="flex justify-center">
+                  <div class="process-circle">02</div>
+                </div>
+                <div class="flex justify-center">
+                  <div class="process-circle">03</div>
+                </div>
+                <div class="flex justify-center">
+                  <div class="process-circle">04</div>
+                </div>
+              </div>
+              <div class="process-endpoint"></div>
+            </div>
+
+            <!-- Mobile timeline — shown only on mobile -->
+            <div class="process-mobile-timeline lg:hidden">
+              <div class="process-mobile-step reveal">
+                <div class="process-mobile-circle">01</div>
+                <div class="process-mobile-card">
+                  <div class="process-mobile-icon">📋</div>
+                  <div>
+                    <div class="process-label">STEP 01</div>
+                    <h3 class="process-mobile-title">Consultation</h3>
+                    <p class="process-mobile-desc">
+                      We discuss your electricity usage, budget and energy goals
+                      to recommend the best solar solution.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="process-mobile-step reveal"
+                style="transition-delay: 0.08s"
+              >
+                <div class="process-mobile-circle">02</div>
+                <div class="process-mobile-card">
+                  <div class="process-mobile-icon">🏠</div>
+                  <div>
+                    <div class="process-label">STEP 02</div>
+                    <h3 class="process-mobile-title">Site Assessment</h3>
+                    <p class="process-mobile-desc">
+                      Our experts inspect your property, roof condition and
+                      sunlight exposure for maximum efficiency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="process-mobile-step reveal"
+                style="transition-delay: 0.16s"
+              >
+                <div class="process-mobile-circle">03</div>
+                <div class="process-mobile-card">
+                  <div class="process-mobile-icon">🛠️</div>
+                  <div>
+                    <div class="process-label">STEP 03</div>
+                    <h3 class="process-mobile-title">Installation</h3>
+                    <p class="process-mobile-desc">
+                      Certified installers safely install your panels, inverter
+                      and electrical components.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="process-mobile-step reveal"
+                style="transition-delay: 0.24s"
+              >
+                <div class="process-mobile-circle">04</div>
+                <div class="process-mobile-card">
+                  <div class="process-mobile-icon">☀️</div>
+                  <div>
+                    <div class="process-label">STEP 04</div>
+                    <h3 class="process-mobile-title">Activation</h3>
+                    <p class="process-mobile-desc">
+                      After testing and commissioning, your system begins
+                      producing clean, renewable energy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop cards -->
+            <div class="hidden lg:grid grid-cols-4 gap-8">
+              <div class="process-card reveal">
+                <div class="process-icon">📋</div>
+                <div class="process-label">STEP 01</div>
+                <h3>Consultation</h3>
+                <p>
+                  We discuss your electricity usage, budget and energy goals to
+                  recommend the best solar solution.
+                </p>
+              </div>
+              <div class="process-card reveal" style="transition-delay: 0.08s">
+                <div class="process-icon">🏠</div>
+                <div class="process-label">STEP 02</div>
+                <h3>Site Assessment</h3>
+                <p>
+                  Our experts inspect your property, roof condition and sunlight
+                  exposure for maximum efficiency.
+                </p>
+              </div>
+              <div class="process-card reveal" style="transition-delay: 0.16s">
+                <div class="process-icon">🛠️</div>
+                <div class="process-label">STEP 03</div>
+                <h3>Installation</h3>
+                <p>
+                  Certified installers safely install your panels, inverter and
+                  electrical components.
+                </p>
+              </div>
+              <div class="process-card reveal" style="transition-delay: 0.24s">
+                <div class="process-icon">☀️</div>
+                <div class="process-label">STEP 04</div>
+                <h3>Activation</h3>
+                <p>
+                  After testing and commissioning, your system begins producing
+                  clean, renewable energy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+      <section class="projects-preview-section">
+        <svg
+          class="projects-wave"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,100 C200,220 400,60 600,140 C800,220 1000,60 1200,120 C1300,155 1380,100 1440,120 L1440,320 L0,320 Z"
+            fill="#FFF3CC"
+            fill-opacity="0.8"
+          />
+          <path
+            d="M0,150 C250,80 500,210 750,160 C1000,110 1200,200 1440,150 L1440,320 L0,320 Z"
+            fill="#F5A800"
+            fill-opacity="0.18"
+          />
+          <path
+            d="M0,200 C300,150 600,230 900,190 C1100,165 1300,215 1440,185 L1440,320 L0,320 Z"
+            fill="#F5A800"
+            fill-opacity="0.28"
+          />
+        </svg>
+
+        <div class="projects-preview-content max-w-7xl mx-auto px-4 sm:px-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-10 reveal"
+          >
+            <div>
+              <div class="eyebrow mb-2">Featured Projects</div>
+              <h2 class="section-title">
+                Real Projects.<br /><span class="text-yellow-500"
+                  >Real Impact.</span
+                >
+              </h2>
+              <p class="text-gray-400 text-sm mt-3 max-w-sm">
+                A glimpse of solar solutions we've delivered for homes and
+                businesses across Central Luzon.
+              </p>
+            </div>
+            <button
+              onclick="showPage('projects')"
+              class="btn-gold self-start mt-2"
+            >
+              View All Projects →
+            </button>
+          </div>
+
+          <!-- MOBILE CAROUSEL -->
+          <div class="projects-carousel lg:hidden">
+            <div class="projects-carousel-track" id="projectsTrack">
+              <div class="projects-carousel-slide">
+                <div class="project-card">
+                  <div class="project-card-img-wrap">
+                    <img
+                      src="SUNLIMITED PICS/14.jpg"
+                      alt="8kW Hybrid Solar Installation"
+                      class="project-card-img"
+                    />
+                    <div class="project-kw-badge">8kW</div>
+                  </div>
+                  <div class="project-card-body">
+                    <h3 class="project-card-title">
+                      8kW Hybrid Solar Installation
+                    </h3>
+                    <p class="project-card-location">
+                      📍 Bacuit, Tibag, Tarlac City
+                    </p>
+                    <div class="project-card-divider"></div>
+                    <ul class="project-card-specs">
+                      <li>
+                        <span class="spec-icon">⚡</span> 8kW Sungrow Hybrid
+                        Inverter
+                      </li>
+                      <li>
+                        <span class="spec-icon">▦</span> 16pcs 620W Jinko
+                        Bi-facial Solar Panels
+                      </li>
+                      <li>
+                        <span class="spec-icon">🔋</span> 330Ah Sunlimited
+                        LiFePO4 Battery
+                      </li>
+                    </ul>
+                    <button
+                      onclick="goToProjectDetail('hybrid-8kw-bacuit-tibag')"
+                      class="project-card-link"
+                    >
+                      View Project Details →
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects-carousel-slide">
+                <div class="project-card">
+                  <div class="project-card-img-wrap">
+                    <img
+                      src="SUNLIMITED PICS/11.jpg"
+                      alt="6kW Hybrid Solar Installation"
+                      class="project-card-img"
+                    />
+                    <div class="project-kw-badge">6kW</div>
+                  </div>
+                  <div class="project-card-body">
+                    <h3 class="project-card-title">
+                      6kW Hybrid Solar Installation
+                    </h3>
+                    <p class="project-card-location">📍 Angeles, Pampanga</p>
+                    <div class="project-card-divider"></div>
+                    <ul class="project-card-specs">
+                      <li>
+                        <span class="spec-icon">⚡</span> 6kW Sungrow Hybrid
+                        Inverter
+                      </li>
+                      <li>
+                        <span class="spec-icon">▦</span> 12pcs 615W Trina
+                        Bi-facial Solar Panels
+                      </li>
+                      <li>
+                        <span class="spec-icon">🔋</span> 314Ah Alp Solar
+                        LiFePO4 Battery
+                      </li>
+                    </ul>
+                    <button
+                      onclick="goToProjectDetail('hybrid-6kw-angeles')"
+                      class="project-card-link"
+                    >
+                      View Project Details →
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects-carousel-slide">
+                <div class="project-card">
+                  <div class="project-card-img-wrap">
+                    <img
+                      src="SUNLIMITED PICS/6.jpg"
+                      alt="8kW Hybrid Solar Installation"
+                      class="project-card-img"
+                    />
+                    <div class="project-kw-badge">8kW</div>
+                  </div>
+                  <div class="project-card-body">
+                    <h3 class="project-card-title">
+                      8kW Hybrid Solar Installation
+                    </h3>
+                    <p class="project-card-location">📍 Balanga, Bataan</p>
+                    <div class="project-card-divider"></div>
+                    <ul class="project-card-specs">
+                      <li>
+                        <span class="spec-icon">⚡</span> 8kW Sungrow Hybrid
+                        Inverter
+                      </li>
+                      <li>
+                        <span class="spec-icon">▦</span> 12pcs 640W Jinko
+                        Bi-facial Solar Panels
+                      </li>
+                      <li>
+                        <span class="spec-icon">🔋</span> 400Ah JM LiFePO4
+                        Battery
+                      </li>
+                    </ul>
+<button onclick="goToProjectDetail('hybrid-8kw-balanga')" class="project-card-link">
+  View Project Details →
+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dots -->
+            <div class="projects-carousel-dots" id="projectsDots">
+              <button
+                class="carousel-dot active"
+                onclick="goToSlide(0)"
+              ></button>
+              <button class="carousel-dot" onclick="goToSlide(1)"></button>
+              <button class="carousel-dot" onclick="goToSlide(2)"></button>
+            </div>
+          </div>
+
+          <!-- DESKTOP GRID — hidden on mobile -->
+          <div class="projects-grid hidden lg:grid">
+            <div class="project-card reveal">
+              <div class="project-card-img-wrap">
+                <img
+                  src="SUNLIMITED PICS/14.jpg"
+                  alt="8kW Hybrid Solar Installation"
+                  class="project-card-img"
+                />
+                <div class="project-kw-badge">8kW</div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">
+                  8kW Hybrid Solar Installation
+                </h3>
+                <p class="project-card-location">
+                  📍 Bacuit, Tibag, Tarlac City
+                </p>
+                <div class="project-card-divider"></div>
+                <ul class="project-card-specs">
+                  <li>
+                    <span class="spec-icon">⚡</span> 8kW Sungrow Hybrid
+                    Inverter
+                  </li>
+                  <li>
+                    <span class="spec-icon">▦</span> 16pcs 620W Jinko Bi-facial
+                    Solar Panels
+                  </li>
+                  <li>
+                    <span class="spec-icon">🔋</span> 330Ah Sunlimited LiFePO4
+                    Battery
+                  </li>
+                </ul>
+                <button
+                  onclick="goToProjectDetail('hybrid-8kw-bacuit-tibag')"
+                  class="project-card-link"
+                >
+                  View Project Details →
+                </button>
+              </div>
+            </div>
+            <div class="project-card reveal" style="transition-delay: 0.08s">
+              <div class="project-card-img-wrap">
+                <img
+                  src="SUNLIMITED PICS/11.jpg"
+                  alt="6kW Hybrid Solar Installation"
+                  class="project-card-img"
+                />
+                <div class="project-kw-badge">6kW</div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">
+                  6kW Hybrid Solar Installation
+                </h3>
+                <p class="project-card-location">📍 Angeles, Pampanga</p>
+                <div class="project-card-divider"></div>
+                <ul class="project-card-specs">
+                  <li>
+                    <span class="spec-icon">⚡</span> 6kW Sungrow Hybrid
+                    Inverter
+                  </li>
+                  <li>
+                    <span class="spec-icon">▦</span> 12pcs 615W Trina Bi-facial
+                    Solar Panels
+                  </li>
+                  <li>
+                    <span class="spec-icon">🔋</span> 314Ah Alp Solar LiFePO4
+                    Battery
+                  </li>
+                </ul>
+                <button
+                  onclick="goToProjectDetail('hybrid-6kw-angeles')"
+                  class="project-card-link"
+                >
+                  View Project Details →
+                </button>
+              </div>
+            </div>
+            <div class="project-card reveal" style="transition-delay: 0.16s">
+              <div class="project-card-img-wrap">
+                <img
+                  src="SUNLIMITED PICS/6.jpg"
+                  alt="8kW Hybrid Solar Installation"
+                  class="project-card-img"
+                />
+                <div class="project-kw-badge">8kW</div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">
+                  8kW Hybrid Solar Installation
+                </h3>
+                <p class="project-card-location">📍 Balanga, Bataan</p>
+                <div class="project-card-divider"></div>
+                <ul class="project-card-specs">
+                  <li>
+                    <span class="spec-icon">⚡</span> 8kW Sungrow Hybrid
+                    Inverter
+                  </li>
+                  <li>
+                    <span class="spec-icon">▦</span> 12pcs 640W Jinko Bi-facial
+                    Solar Panels
+                  </li>
+                  <li>
+                    <span class="spec-icon">🔋</span> 400Ah JM LiFePO4 Battery
+                  </li>
+                </ul>
+                <button
+                  onclick="goToProjectDetail('hybrid-8kw-balanga')"
+                  class="project-card-link"
+                >
+                  View Project Details →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIAL PREVIEW -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-10 reveal">
+            <div class="eyebrow mb-2">Testimonials</div>
+            <h2 class="section-title">
+              Trusted by Our<br /><span class="text-yellow-500"
+                >Happy Customers</span
+              >
+            </h2>
+            <div class="gold-bar mx-auto mt-4"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">
+            <div class="review-card reveal">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                "Our air conditioner has been running nonstop since earlier, and
+                my battery is almost fully charged.😁"
+              </p>
+              <div
+                class="flex items-center gap-3 pt-3 border-t border-gray-100">
+                <div
+                  class="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
+                  style="background-color: #f5a623">
+                  JV
+                </div>
+                <div>
+                  <div class="font-poppins font-700 text-gray-800 text-sm">
+                    Jayson Valentino
+                  </div>
+                  <div class="text-gray-400 text-xs">Mexico, Pampanga</div>
+                </div>
+              </div>
+            </div>
+            <div class="review-card reveal" style="transition-delay: 0.1s">
+              <div class="stars mb-2">★★★★★</div>
+              <p class="text-gray-500 text-sm leading-relaxed mb-4">
+                "Investing in peace of mind. ☀️🔋 El solidong solar system
+                powered by Sunlimited! Wala nang kaba sa monthly bills."
+              </p>
+              <div
+                class="flex items-center gap-3 pt-3 border-t border-gray-100"
+              >
+                <div
+                  class="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
+                  style="background-color: #4a90d9"
+                >
+                  KV
+                </div>
+                <div>
+                  <div class="font-poppins font-700 text-gray-800 text-sm">
+                    Kamukgang Vlogs
+                  </div>
+                  <div class="text-gray-400 text-xs">Tarlac, Philippines</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-8 reveal">
+            <button onclick="showPage('reviews')" class="btn-gold">
+              View All Reviews →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="cta-inner max-w-7xl mx-auto px-4 sm:px-6">
+          <!-- Mobile layout -->
+          <div class="cta-mobile lg:hidden">
+            <div class="cta-mobile-top">
+              <div class="cta-sun-icon">☀️</div>
+              <div>
+                <h2 class="cta-mobile-title">Ready to Switch?</h2>
+                <p class="cta-mobile-sub">Let's build your solar future.</p>
+              </div>
+            </div>
+            <button onclick="showPage('contact')" class="cta-mobile-btn">
+              Get a Free Quote →
+            </button>
+          </div>
+
+          <!-- Desktop layout -->
+          <div class="hidden lg:flex items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+              <span class="text-4xl">☀️</span>
+              <div>
+                <h2
+                  class="font-poppins font-800 text-dark text-2xl md:text-3xl mb-2"
+                >
+                  Ready to Switch?
+                </h2>
+                <p class="text-dark/70 text-sm">
+                  Let's build your solar future.
+                </p>
+              </div>
+            </div>
+            <button
+              onclick="showPage('contact')"
+              class="bg-[#0f172a] text-white font-poppins font-700 text-sm px-8 py-3 rounded-lg hover:bg-[#111c33] transition-all flex items-center gap-2 flex-shrink-0"
+            >
+              Get a Free Quote →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+     PAGE 2: ABOUT US
+══════════════════════════════════════════════ -->
+    <div id="page-about" class="page">
+      <div class="bg-gray-900 py-16 relative overflow-hidden">
+        <div
+          class="absolute inset-0"
+          style="
+            background: url(&quot;SUNLIMITED PICS/15.jpg&quot;) center/cover;
+            opacity: 0.15;
+          "
+        ></div>
+        <div
+          class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6"
+          style="padding-top: 120px"
+        >
+          <div class="eyebrow mb-2" style="color: #29b6f6">
+            About SunLimited
+          </div>
+          <h1 class="section-title-w mb-3">
+            Building a Sustainable<br /><span class="text-amber-500"
+              >Future with Solar Energy</span
+            >
+          </h1>
+          <p class="text-white/60 text-sm max-w-xl">
+            SunLimited started with a simple mission: to make clean energy
+            accessible to everyone.
+          </p>
+        </div>
+      </div>
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center mb-20">
+      <div class="reveal">
+        <div class="eyebrow mb-2">Our Story</div>
+        <h2 class="section-title mb-4">Who We Are</h2>
+        <div class="gold-bar mb-6"></div>
+        <p class="text-gray-500 text-sm leading-relaxed mb-4">
+          SunLimited was founded with a simple mission: to make clean
+          energy accessible to everyone. Today, we continue to help homes
+          and businesses reduce their carbon footprint and energy costs.
+        </p>
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+          As an official Sungrow distributor based in Tarlac City, we
+          bring world-class solar technology to Central Luzon and beyond —
+          backed by expert installation and genuine after-sales care.
+        </p>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="text-center p-4 bg-blue-50 rounded-xl">
+            <div class="font-poppins font-900 text-2xl text-yellow-500">150+</div>
+            <div class="text-gray-500 text-xs mt-1">Projects</div>
+          </div>
+          <div class="text-center p-4 bg-blue-50 rounded-xl">
+            <div class="font-poppins font-900 text-2xl text-yellow-500">150+</div>
+            <div class="text-gray-500 text-xs mt-1">Clients</div>
+          </div>
+          <div class="text-center p-4 bg-blue-50 rounded-xl">
+            <div class="font-poppins font-900 text-2xl text-yellow-500">4</div>
+            <div class="text-gray-500 text-xs mt-1">Years</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay: 0.1s">
+        <div class="relative">
+          <img src="SUNLIMITED PICS/16.jpg" alt="Team"
+            class="w-full h-72 object-cover rounded-2xl shadow-xl"/>
+        </div>
+        <div class="grid grid-cols-3 gap-3 mt-3">
+          <img src="SUNLIMITED PICS/11.jpg" class="h-20 w-full object-cover rounded-xl"/>
+          <img src="SUNLIMITED PICS/17.jpg" class="h-20 w-full object-cover rounded-xl"/>
+          <img src="SUNLIMITED PICS/18.jpg" class="h-20 w-full object-cover rounded-xl"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- VISION / MISSION / PROMISE -->
+    <!-- Desktop: 3 columns | Mobile: stacked horizontal cards -->
+    <div class="mb-20">
+
+      <!-- MOBILE layout (hidden on md+) -->
+      <div class="flex flex-col gap-4 md:hidden">
+        <div class="flex items-start gap-4 p-5 rounded-2xl border border-gray-100 card-shadow reveal">
+          <div class="text-3xl flex-shrink-0">🌟</div>
+          <div>
+            <h3 class="font-poppins font-700 text-gray-800 text-base mb-1">Our Vision</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              To be the most preferred solar service provider in the region, recognized for excellence, integrity, and contributions to a sustainable future.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-yellow-400 reveal" style="transition-delay:.08s">
+          <div class="text-3xl flex-shrink-0">🎯</div>
+          <div>
+            <h3 class="font-poppins font-700 text-dark text-base mb-1">Our Mission</h3>
+            <p class="text-dark/70 text-sm leading-relaxed">
+              To deliver reliable, efficient, and affordable solar energy solutions through expert installation, transparent pricing, and outstanding customer support — empowering households and businesses to save more while going green.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl border border-gray-100 card-shadow reveal" style="transition-delay:.16s">
+          <div class="text-3xl flex-shrink-0">🤝</div>
+          <div>
+            <h3 class="font-poppins font-700 text-gray-800 text-base mb-1">Our Promise</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Quality, integrity, and customer satisfaction in every installation we complete.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DESKTOP layout (hidden on mobile) -->
+      <div class="hidden md:grid grid-cols-3 gap-6">
+        <div class="text-center p-8 rounded-2xl border border-gray-100 card-shadow card-shadow-hover reveal">
+          <div class="text-3xl mb-4">🌟</div>
+          <h3 class="font-poppins font-700 text-gray-800 text-base mb-3">Our Vision</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            To be the most preferred solar service provider in the region, recognized for excellence, integrity, and contributions to a sustainable future.
+          </p>
+        </div>
+        <div class="text-center p-8 rounded-2xl bg-yellow-400 reveal" style="transition-delay:.08s">
+          <div class="text-3xl mb-4">🎯</div>
+          <h3 class="font-poppins font-700 text-dark text-base mb-3">Our Mission</h3>
+          <p class="text-dark/70 text-sm leading-relaxed">
+            To deliver reliable, efficient, and affordable solar energy solutions through expert installation, transparent pricing, and outstanding customer support — empowering households and businesses to save more while going green.
+          </p>
+        </div>
+        <div class="text-center p-8 rounded-2xl border border-gray-100 card-shadow card-shadow-hover reveal" style="transition-delay:.16s">
+          <div class="text-3xl mb-4">🤝</div>
+          <h3 class="font-poppins font-700 text-gray-800 text-base mb-3">Our Promise</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Quality, integrity, and customer satisfaction in every installation we complete.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+<!-- MILESTONES -->
+          <div class="mb-20 reveal">
+            <div class="text-center mb-12">
+              <div class="eyebrow mb-2">Our Journey</div>
+              <h2 class="section-title">Milestones of Growth</h2>
+              <div class="gold-bar mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-5">
+                            <div class="text-center p-6 bg-blue-50 rounded-2xl">
+                <div class="font-poppins font-900 text-2xl text-yellow-500 mb-1">2022</div>
+                <div class="font-poppins font-700 text-gray-700 text-xs mb-1">Founded</div>
+                <div class="text-gray-400 text-xs">SunLimited was established in Tarlac City.</div>
+              </div>
+              <div class="text-center p-6 bg-blue-50 rounded-2xl">
+                <div class="font-poppins font-900 text-2xl text-yellow-500 mb-1">2023</div>
+                <div class="font-poppins font-700 text-gray-700 text-xs mb-1">Growing presence</div>
+                <div class="text-gray-400 text-xs">SunLimited started building its reputation and reaching more customers in Tarlac City..</div>
+              </div>
+              <div class="text-center p-6 bg-yellow-400 rounded-2xl">
+                <div class="font-poppins font-900 text-2xl text-dark mb-1">2024</div>
+                <div class="font-poppins font-700 text-dark text-xs mb-1">Sungrow Partnership</div>
+                <div class="text-dark/60 text-xs">Became an sub distributor of Sungrow products.</div>
+              </div>
+              <div class="text-center p-6 bg-blue-50 rounded-2xl">
+                <div class="font-poppins font-900 text-2xl text-yellow-500 mb-1">2025</div>
+                <div class="font-poppins font-700 text-gray-700 text-xs mb-1">150+ Happy Clients</div>
+                <div class="text-gray-400 text-xs">Reached 100 satisfied customers milestone.</div>
+              </div>
+              <div class="text-center p-6 bg-blue-50 rounded-2xl">
+                <div class="font-poppins font-900 text-2xl text-yellow-500 mb-1">2026</div>
+                <div class="font-poppins font-700 text-gray-700 text-xs mb-1">Expanding</div>
+                <div class="text-gray-400 text-xs">Continuing to power more communities.</div>
+              </div>
+            </div>
+          </div><!-- END MILESTONES -->
+
+<section class="team-section">
+
+  <div class="team-header">
+    <p class="team-eyebrow">OUR TEAM</p>
+    <h2 class="team-title">The People Behind SunLimited</h2>
+    <div class="team-gold-bar"></div>
+    <p class="team-subtitle">A small team with a big commitment to deliver reliable and sustainable solar solutions.</p>
+  </div>
+
+  <!-- MOBILE team cards (hidden on lg+) -->
+  <div class="flex flex-col gap-4 px-4 mb-8 lg:hidden">
+
+    <!-- Card 1: Ace -->
+    <div class="flex items-center gap-4 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+      <img src="SUNLIMITED PICS/ace.png" alt="Ace Avillanoza"
+        class="w-32 h-36 object-cover rounded-xl flex-shrink-0"/>
+      <div class="py-3 pr-4">
+        <p class="text-xs font-700 text-amber-500 uppercase tracking-widest mb-1">Founder &amp; Owner</p>
+        <h3 class="font-poppins font-800 text-gray-900 text-base mb-1">Ace Avillanoza</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">Leads the vision and overall direction of SunLimited.</p>
+      </div>
+    </div>
+
+    <!-- Card 2: Michael -->
+    <div class="flex items-center gap-4 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+      <img src="SUNLIMITED PICS/michael.png" alt="Michael Deleon"
+        class="w-32 h-36 object-cover rounded-xl flex-shrink-0"/>
+      <div class="py-3 pr-4">
+        <p class="text-xs font-700 text-amber-500 uppercase tracking-widest mb-1">Lead Electrician</p>
+        <h3 class="font-poppins font-800 text-gray-900 text-base mb-1">Michael Deleon</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">Oversees all electrical installations with precision and safety.</p>
+      </div>
+    </div>
+
+    <!-- Card 3: Team blurb with group photo -->
+    <div class="flex items-center gap-4 bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+      <img src="SUNLIMITED PICS/sun team1.jpg" alt="The SunLimited team"
+        class="w-32 h-36 object-cover rounded-xl flex-shrink-0"/>
+      <div class="py-3 pr-4">
+        <p class="text-xs font-700 text-amber-500 uppercase tracking-widest mb-1">Our Team</p>
+        <h3 class="font-poppins font-800 text-gray-900 text-base mb-1">Small Team.<br/>Big Dedication.</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">We work together to ensure quality workmanship and customer satisfaction in every project.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DESKTOP team cards (hidden on mobile) -->
+  <div class="team-cards-row hidden lg:flex">
+
+    <div class="team-member-card">
+      <div class="team-avatar-wrap">
+        <img class="team-avatar-icon" src="SUNLIMITED PICS/ace.png" alt="Ace Avillanoza">
+      </div>
+      <div class="team-member-info">
+        <p class="team-member-role">FOUNDER &amp; OWNER</p>
+        <div class="team-member-divider-wrap"><div class="team-member-divider"></div></div>
+        <h3 class="team-member-name">Ace Avillanoza</h3>
+        <p class="team-member-desc">Leads the vision and overall direction of SunLimited.</p>
+      </div>
+    </div>
+
+    <div class="team-member-card">
+      <div class="team-avatar-wrap">
+        <img class="team-avatar-icon" src="SUNLIMITED PICS/michael.png" alt="Michael Deleon">
+      </div>
+      <div class="team-member-info">
+        <p class="team-member-role">LEAD ELECTRICIAN</p>
+        <div class="team-member-divider-wrap"><div class="team-member-divider"></div></div>
+        <h3 class="team-member-name">Michael Deleon</h3>
+        <p class="team-member-desc">Oversees all electrical installations with precision and safety.</p>
+      </div>
+    </div>
+
+    <div class="team-member-card team-blurb-card">
+
+      <div class="team-member-info">
+        <p class="team-member-role">OUR TEAM</p>
+        <div class="team-member-divider-wrap"><div class="team-member-divider"></div></div>
+        <h3 class="team-blurb-heading">Small Team.<br>Big Dedication.</h3>
+        <p class="team-member-desc">We work together to ensure quality workmanship and customer satisfaction in every project.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MOBILE banner (hidden on lg+) -->
+  <div class="lg:hidden px-4 mb-8">
+    <div class="rounded-2xl overflow-hidden" style="background:#FDF6E9;">
+      <div class="flex items-start gap-3 p-5">
+        <div>
+          <h3 class="font-poppins font-800 text-gray-900 text-lg mb-1">Stronger Together</h3>
+          <div class="w-8 h-1 bg-amber-400 rounded mb-3"></div>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Every installation is backed by teamwork, experience, and a shared commitment to a brighter future.</p>
+          <!-- Pillars -->
+<!-- Pillars -->
+          <div class="flex items-start justify-between text-center pt-2 border-t border-gray-200">
+            <div class="flex flex-col items-center gap-1 flex-1">
+              <svg class="w-6 h-6 mb-1" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/><path d="M9 12l2.2 2.2L15 10"/></svg>
+              <p class="text-xs font-700 text-gray-800">Reliable</p>
+            </div>
+            <div class="w-px bg-gray-200 self-stretch mx-1"></div>
+            <div class="flex flex-col items-center gap-1 flex-1">
+              <svg class="w-6 h-6 mb-1" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2-2 2.1-2.1z"/></svg>
+              <p class="text-xs font-700 text-gray-800">Experienced</p>
+            </div>
+            <div class="w-px bg-gray-200 self-stretch mx-1"></div>
+            <div class="flex flex-col items-center gap-1 flex-1">
+              <svg class="w-6 h-6 mb-1" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l3.3-3.3a2 2 0 0 1 2.8 0L11 11l2-2 2 2 1.4-1.3a2 2 0 0 1 2.8 0L21 13"/><path d="M9 12l3 3 3-3"/></svg>
+              <p class="text-xs font-700 text-gray-800">Professional</p>
+            </div>
+            <div class="w-px bg-gray-200 self-stretch mx-1"></div>
+            <div class="flex flex-col items-center gap-1 flex-1">
+              <svg class="w-6 h-6 mb-1" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.8-10-9.3C.5 8.4 2.6 5 6 5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.4 0 5.5 3.4 4 6.7-2.5 4.5-10 9.3-10 9.3z"/></svg>
+              <p class="text-xs font-700 text-gray-800">Committed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESKTOP banner (hidden on mobile) -->
+  <div class="team-banner hidden lg:flex">
+    <div class="team-banner-photo">
+      <img class="team-banner-img" src="SUNLIMITED PICS/sun team1.jpg" alt="The SunLimited team">
+    </div>
+    <div class="team-banner-content">
+      <svg class="team-banner-icon" viewBox="0 0 24 24" fill="none" stroke="#E8A020" stroke-width="1.6" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>
+      </svg>
+      <h3 class="team-banner-title">Stronger Together</h3>
+      <div class="team-banner-bar"></div>
+      <p class="team-banner-text">Every installation is backed by teamwork, experience, and a shared commitment to a brighter future.</p>
+      <div class="team-pillars">
+        <div class="team-pillar">
+          <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/><path d="M9 12l2.2 2.2L15 10"/></svg>
+          <p class="pillar-label">Reliable</p>
+        </div>
+        <div class="team-pillar-divider"></div>
+        <div class="team-pillar">
+          <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2-2 2.1-2.1z"/></svg>
+          <p class="pillar-label">Experienced</p>
+        </div>
+        <div class="team-pillar-divider"></div>
+        <div class="team-pillar">
+          <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l3.3-3.3a2 2 0 0 1 2.8 0L11 11l2-2 2 2 1.4-1.3a2 2 0 0 1 2.8 0L21 13"/><path d="M9 12l3 3 3-3"/></svg>
+          <p class="pillar-label">Professional</p>
+        </div>
+        <div class="team-pillar-divider"></div>
+        <div class="team-pillar">
+          <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="#0F1B2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.8-10-9.3C.5 8.4 2.6 5 6 5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.4 0 5.5 3.4 4 6.7-2.5 4.5-10 9.3-10 9.3z"/></svg>
+          <p class="pillar-label">Committed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+        </div><!-- closes max-w-7xl mx-auto px-4 sm:px-6 -->
+      </section><!-- closes py-20 bg-white -->
+
+
+      <!-- VALUES -->
+      <section
+        class="py-20"
+        style="background: linear-gradient(135deg, #0d1b2a, #1a1a2e)"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-12 reveal">
+            <div class="eyebrow mb-2">Our Values</div>
+            <h2 class="section-title-w">What We Stand For</h2>
+            <div class="gold-bar mx-auto mt-4"></div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="value-card reveal">
+              <div class="text-3xl mb-3">🏅</div>
+              <div class="font-poppins font-700 text-white text-sm mb-2">
+                Integrity
+              </div>
+              <div class="text-white/45 text-xs">
+                We do the right thing, always.
+              </div>
+            </div>
+            <div class="value-card reveal" style="transition-delay: 0.07s">
+              <div class="text-3xl mb-3">⭐</div>
+              <div class="font-poppins font-700 text-white text-sm mb-2">
+                Quality
+              </div>
+              <div class="text-white/45 text-xs">
+                No shortcuts, no compromises.
+              </div>
+            </div>
+            <div class="value-card reveal" style="transition-delay: 0.14s">
+              <div class="text-3xl mb-3">💡</div>
+              <div class="font-poppins font-700 text-white text-sm mb-2">
+                Innovation
+              </div>
+              <div class="text-white/45 text-xs">
+                Always finding better solutions.
+              </div>
+            </div>
+            <div class="value-card reveal" style="transition-delay: 0.21s">
+              <div class="text-3xl mb-3">❤️</div>
+              <div class="font-poppins font-700 text-white text-sm mb-2">
+                Customer Focus
+              </div>
+              <div class="text-white/45 text-xs">
+                Your satisfaction is our priority.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section py-14">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6"
+        >
+<div class="flex items-center gap-4">
+    <!-- Sun -->
+    <div class="cta-sun-icon">☀️</div>
+
+
+    <!-- Text -->
+    <div>
+        <p class="text-dark/60 text-sm">
+            Let's work together for a cleaner tomorrow.
+        </p>
+        <h2 class="font-poppins font-800 text-dark text-3xl leading-tight">
+            Ready to go solar with us?
+        </h2>
+    </div>
+</div>
+          <button onclick="showPage('contact')" class="bg-[#0f172a] text-white font-poppins font-700 text-sm px-8 py-3 rounded-lg hover:bg-[#111c33] transition-all flex items-center gap-2 flex-shrink-0"
+>
+            Get a Free Quote →
+          </button>
+        </div>
+      </section>
+
+      <div id="footer-about"></div>
+    </div>
+
+<!-- ══════════════════════════════════════════════
+     PAGE 3: SERVICES
+══════════════════════════════════════════════ -->
+<div id="page-services" class="page">
+  <div class="bg-gray-900 py-16 relative overflow-hidden">
+    <div class="absolute inset-0" style="background: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80') center/cover; opacity: 0.15;"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6" style="padding-top: 120px">
+      <div class="eyebrow mb-2" style="color: #29b6f6">Our Services</div>
+      <h1 class="section-title-w mb-3">
+        Complete Solar Solutions<br /><span class="text-yellow-400">Tailored for You</span>
+      </h1>
+      <p class="text-white/60 text-sm max-w-xl">
+        From consultation to installation and after-sales support, we provide end-to-end solar solutions you can rely on.
+      </p>
+    </div>
+  </div>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+      <!-- SERVICES 4-CARD GRID (desktop) -->
+      <div class="services-cards-grid mb-16">
+
+        <div class="svc-card reveal">
+          <div class="svc-card-img-wrap">
+            <img src="SUNLIMITED PICS/19.jpg" alt="Solar Installation" />
+            <div class="svc-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4" fill="#F5A800"/>
+                <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" fill="none" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="svc-card-body">
+            <div class="svc-card-title">Solar Installation</div>
+            <div class="svc-card-desc">End-to-end solar installation services that help you reduce electricity costs and carbon footprint.</div>
+            <button onclick="openServiceDetail('solar-installation')" class="svc-card-link">Learn More →</button>
+          </div>
+        </div>
+
+        <div class="svc-card reveal" style="transition-delay: 0.1s">
+          <div class="svc-card-img-wrap">
+            <img src="sunlimited pics/23.jpg" alt="Sungrow Distributor" />
+            <div class="svc-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#F5A800"/>
+              </svg>
+            </div>
+          </div>
+          <div class="svc-card-body">
+            <div class="svc-card-title">Sungrow Distributor</div>
+            <div class="svc-card-desc">Official distributor of Sungrow inverters and batteries for homes and businesses.</div>
+            <button onclick="openServiceDetail('sungrow-distributor')" class="svc-card-link">Learn More →</button>
+          </div>
+        </div>
+
+        <div class="svc-card reveal" style="transition-delay: 0.2s">
+          <div class="svc-card-img-wrap">
+            <img src="SUNLIMITED PICS/24.jpg" alt="Hybrid Solar + Battery Systems" />
+            <div class="svc-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                <rect x="2" y="7" width="18" height="11" rx="2" fill="none" stroke="#F5A800" stroke-width="2"/>
+                <path d="M22 11v3" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/>
+                <path d="M6 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" fill="none" stroke="#F5A800" stroke-width="2"/>
+                <line x1="7" y1="12" x2="7" y2="14" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/>
+                <line x1="11" y1="12" x2="11" y2="14" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="svc-card-body">
+            <div class="svc-card-title">Hybrid Solar + Battery Systems</div>
+            <div class="svc-card-desc">Smart energy storage for uninterrupted power. Stay powered during brownouts.</div>
+            <button onclick="openServiceDetail('hybrid-solar-battery')" class="svc-card-link">Learn More →</button>
+          </div>
+        </div>
+
+        <div class="svc-card reveal" style="transition-delay: 0.3s">
+          <div class="svc-card-img-wrap">
+            <img src="SUNLIMITED PICS/21.jpg" alt="Warranty & After-Sales Support" />
+            <div class="svc-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5A800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="svc-card-body">
+            <div class="svc-card-title">Warranty &amp; After-Sales Support</div>
+            <div class="svc-card-desc">Reliable maintenance and support to keep your system running at its best.</div>
+            <button onclick="openServiceDetail('warranty-support')" class="svc-card-link">Learn More →</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SERVICES MOBILE CAROUSEL -->
+      <div class="services-cards-carousel">
+        <div class="services-cards-track-wrap">
+          <div class="services-cards-track" id="svcTrack">
+
+            <div class="services-cards-slide">
+              <div class="svc-card">
+                <div class="svc-card-img-wrap">
+                  <img src="SUNLIMITED PICS/19.jpg" alt="Solar Installation" />
+                  <div class="svc-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="4" fill="#F5A800"/>
+                      <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" fill="none" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="svc-card-body">
+                  <div class="svc-card-title">Solar Installation</div>
+                  <div class="svc-card-desc">End-to-end solar installation services that help you reduce electricity costs and carbon footprint.</div>
+                  <button onclick="openServiceDetail('solar-installation')" class="svc-card-link">Learn More →</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="services-cards-slide">
+              <div class="svc-card">
+                <div class="svc-card-img-wrap">
+                  <img src="sunlimited pics/23.jpg" alt="Sungrow Distributor" />
+                  <div class="svc-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#F5A800"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="svc-card-body">
+                  <div class="svc-card-title">Sungrow Distributor</div>
+                  <div class="svc-card-desc">Sub distributor of Sungrow inverters and batteries for homes and businesses.</div>
+                  <button onclick="openServiceDetail('sungrow-distributor')" class="svc-card-link">Learn More →</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="services-cards-slide">
+              <div class="svc-card">
+                <div class="svc-card-img-wrap">
+                  <img src="SUNLIMITED PICS/24.jpg" alt="Hybrid Solar + Battery Systems" />
+                  <div class="svc-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                      <rect x="2" y="7" width="18" height="11" rx="2" fill="none" stroke="#F5A800" stroke-width="2"/>
+                      <path d="M22 11v3" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M6 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" fill="none" stroke="#F5A800" stroke-width="2"/>
+                      <line x1="7" y1="12" x2="7" y2="14" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/>
+                      <line x1="11" y1="12" x2="11" y2="14" stroke="#F5A800" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="svc-card-body">
+                  <div class="svc-card-title">Hybrid Solar + Battery Systems</div>
+                  <div class="svc-card-desc">Smart energy storage for uninterrupted power. Stay powered during brownouts.</div>
+                  <button onclick="openServiceDetail('hybrid-solar-battery')" class="svc-card-link">Learn More →</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="services-cards-slide">
+              <div class="svc-card">
+                <div class="svc-card-img-wrap">
+                  <img src="SUNLIMITED PICS/21.jpg" alt="Warranty & After-Sales Support" />
+                  <div class="svc-card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5A800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="svc-card-body">
+                  <div class="svc-card-title">Warranty &amp; After-Sales Support</div>
+                  <div class="svc-card-desc">Reliable maintenance and support to keep your system running at its best.</div>
+                  <button onclick="openServiceDetail('warranty-support')" class="svc-card-link">Learn More →</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="services-cards-dots">
+          <button class="services-cards-dot active"></button>
+          <button class="services-cards-dot"></button>
+          <button class="services-cards-dot"></button>
+          <button class="services-cards-dot"></button>
+        </div>
+
+      </div>
+
+      <!-- WHY GO SOLAR -->
+      <div class="solar-benefits-section">
+        <div class="solar-benefits-header">
+          <div class="eyebrow">Benefits of Going Solar</div>
+          <h2>Why Go Solar?</h2>
+          <div class="gold-bar"></div>
+          <p>Clean energy today for a brighter, more independent tomorrow.</p>
+        </div>
+
+        <!-- Desktop grid -->
+        <div class="solar-benefits-grid">
+          <div class="benefit-card reveal">
+            <div class="benefit-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#F5A800" stroke="#1A1A2E" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="benefit-title">Lower Electricity Bills</div>
+            <div class="benefit-bar"></div>
+            <div class="benefit-desc">Reduce electricity bills by up to 80% and save more every month.</div>
+          </div>
+
+          <div class="benefit-card reveal" style="transition-delay:.08s">
+            <div class="benefit-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+                <path d="M9 21V12h6v9" stroke="#1A1A2E"/>
+                <path d="M3 9.5L12 3l9 6.5" stroke="#F5A800" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="benefit-title">Increase Property Value</div>
+            <div class="benefit-bar"></div>
+            <div class="benefit-desc">Homes with solar systems have higher resale value.</div>
+          </div>
+
+          <div class="benefit-card reveal" style="transition-delay:.16s">
+            <div class="benefit-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-4-8-8-8z"/>
+                <path d="M9 10l2 2 4-4" stroke="#F5A800" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="benefit-title">Environmentally Friendly</div>
+            <div class="benefit-bar"></div>
+            <div class="benefit-desc">Use clean, renewable energy and reduce your carbon footprint.</div>
+          </div>
+
+          <div class="benefit-card reveal" style="transition-delay:.24s">
+            <div class="benefit-icon-wrap">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2v4M12 18v4M5 12H1M23 12h-4"/>
+                <circle cx="12" cy="12" r="5" stroke="#1A1A2E"/>
+                <circle cx="12" cy="12" r="2" fill="#F5A800" stroke="none"/>
+              </svg>
+            </div>
+            <div class="benefit-title">Energy Independence</div>
+            <div class="benefit-bar"></div>
+            <div class="benefit-desc">Generate your own power and stay protected during outages.</div>
+          </div>
+        </div>
+
+        <!-- Mobile carousel -->
+        <div class="solar-benefits-carousel">
+          <div class="solar-benefits-track-wrap">
+            <div class="solar-benefits-track" id="benefitsTrack">
+
+              <div class="solar-benefits-slide">
+                <div class="benefit-card">
+                  <div class="benefit-icon-wrap">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#F5A800" stroke="#1A1A2E" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div class="benefit-title">Lower Electricity Bills</div>
+                  <div class="benefit-bar"></div>
+                  <div class="benefit-desc">Reduce electricity bills by up to 80% and save more every month.</div>
+                  <button onclick="showPage('contact')" class="svc-card-link" style="margin-top:1rem">Learn More →</button>
+                </div>
+              </div>
+
+              <div class="solar-benefits-slide">
+                <div class="benefit-card">
+                  <div class="benefit-icon-wrap">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+                      <path d="M9 21V12h6v9"/>
+                      <path d="M3 9.5L12 3l9 6.5" stroke="#F5A800" stroke-width="2"/>
+                    </svg>
+                  </div>
+                  <div class="benefit-title">Increase Property Value</div>
+                  <div class="benefit-bar"></div>
+                  <div class="benefit-desc">Homes with solar systems have higher resale value.</div>
+                  <button onclick="showPage('contact')" class="svc-card-link" style="margin-top:1rem">Learn More →</button>
+                </div>
+              </div>
+
+              <div class="solar-benefits-slide">
+                <div class="benefit-card">
+                  <div class="benefit-icon-wrap">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2C8 2 4 6 4 10c0 5 8 12 8 12s8-7 8-12c0-4-4-8-8-8z"/>
+                      <path d="M9 10l2 2 4-4" stroke="#F5A800" stroke-width="2"/>
+                    </svg>
+                  </div>
+                  <div class="benefit-title">Environmentally Friendly</div>
+                  <div class="benefit-bar"></div>
+                  <div class="benefit-desc">Use clean, renewable energy and reduce your carbon footprint.</div>
+                  <button onclick="showPage('contact')" class="svc-card-link" style="margin-top:1rem">Learn More →</button>
+                </div>
+              </div>
+
+              <div class="solar-benefits-slide">
+                <div class="benefit-card">
+                  <div class="benefit-icon-wrap">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2v4M12 18v4M5 12H1M23 12h-4"/>
+                      <circle cx="12" cy="12" r="5"/>
+                      <circle cx="12" cy="12" r="2" fill="#F5A800" stroke="none"/>
+                    </svg>
+                  </div>
+                  <div class="benefit-title">Energy Independence</div>
+                  <div class="benefit-bar"></div>
+                  <div class="benefit-desc">Generate your own power and stay protected during outages.</div>
+                  <button onclick="showPage('contact')" class="svc-card-link" style="margin-top:1rem">Learn More →</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="solar-benefits-dots">
+            <button class="solar-benefits-dot active"></button>
+            <button class="solar-benefits-dot"></button>
+            <button class="solar-benefits-dot"></button>
+            <button class="solar-benefits-dot"></button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="text-center py-14 rounded-3xl reveal" style="background: linear-gradient(135deg, #0f2a4a, #1a1a2e)">
+        <p class="text-white/60 text-sm mb-2">Not sure which solution is right for you?</p>
+        <h2 class="font-poppins font-800 text-white text-2xl mb-6">Our experts will help you find the best fit.</h2>
+        <div>
+        </div>               <button onclick="showPage('contact')" class="btn-gold">Get a Free Consultation →</button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICE DETAIL POPUP (shared by desktop + mobile) -->
+  <div class="svc-modal-overlay" id="svcModalOverlay" onclick="handleOverlayClick(event)">
+    <div class="svc-modal" role="dialog" aria-modal="true">
+      <button class="svc-detail-close" onclick="closeServiceDetail()" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="svc-modal-scroll">
+        <div class="svc-detail-grid">
+          <div class="svc-detail-text">
+            <div class="svc-detail-head">
+              <div class="svc-detail-icon" id="svcDetailIcon"></div>
+              <div>
+                <h3 class="svc-detail-title" id="svcDetailTitle"></h3>
+                <p class="svc-detail-subtitle" id="svcDetailSub"></p>
+              </div>
+            </div>
+            <div class="svc-detail-bar"></div>
+            <p class="svc-detail-desc" id="svcDetailDesc"></p>
+            <div class="svc-detail-included-label">What's Included:</div>
+            <ul class="svc-detail-list" id="svcDetailList"></ul>
+          </div>
+          <div class="svc-detail-img-wrap">
+            <img id="svcDetailImg" src="" alt="" />
+          </div>
+        </div>
+        <div class="svc-detail-cta">
+          <div class="svc-detail-cta-left">
+            <div class="svc-detail-cta-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            </div>
+            <div>
+              <div class="svc-detail-cta-title">Need help getting started?</div>
+              <div class="svc-detail-cta-sub">Our solar experts are here to guide you.</div>
+              
+              <button onclick="showPage('contact'); closeServiceDetail();" class="btn-gold">Get a Free Consultation →</button>
+            </div>          
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 4: REVIEWS
+══════════════════════════════════════════════ -->
+<div id="page-reviews" class="page">
+
+  <div
+    class="py-10 md:py-20 relative overflow-hidden"
+    style="background: linear-gradient(135deg, #0f2a4a, #1a1a2e)"
+  >
+
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 text-center pt-24 md:pt-32"
+    >
+
+      <div class="eyebrow mb-2" style="color:#29b6f6">
+        Customer Reviews
+      </div>
+
+      <h1 class="section-title-w text-4xl md:text-6xl mb-3">
+        Powering Homes.<br>
+        <span class="text-yellow-400">
+          Empowering Communities.
+        </span>
+      </h1>
+
+      <p class="text-white/60 text-sm max-w-md mx-auto">
+        See what our customers are saying about SunLimited.
+      </p>
+
+      <div class="flex items-center justify-center gap-4 md:gap-6 mt-5 md:mt-8 flex-wrap">
+
+        <div class="text-center">
+          <div class="font-poppins font-900 text-5xl text-yellow-400">
+            5.0
+          </div>
+
+          <div class="stars mt-1">
+            ★★★★★
+          </div>
+
+          <div class="text-white/50 text-xs mt-1">
+            Overall Rating
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 min-w-40">
+
+          <div class="flex items-center gap-2">
+            <span class="text-white/50 text-xs w-4">5</span>
+
+            <div class="w-24 bg-white/10 rounded-full h-2">
+              <div
+                class="bg-yellow-400 h-2 rounded-full"
+                style="width:100%">
+              </div>
+            </div>
+
+            <span class="text-white/50 text-xs">
+              100%
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-white/50 text-xs w-4">4</span>
+
+            <div class="w-24 bg-white/10 rounded-full h-2">
+              <div
+                class="bg-yellow-400 h-2 rounded-full"
+                style="width:0%">
+              </div>
+            </div>
+
+            <span class="text-white/50 text-xs">
+              0
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-white/50 text-xs w-4">3</span>
+
+            <div class="w-24 bg-white/10 rounded-full h-2">
+              <div
+                class="bg-yellow-400 h-2 rounded-full"
+                style="width:0%">
+              </div>
+            </div>
+
+            <span class="text-white/50 text-xs">
+              0
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <section class="py-12 md:py-20 bg-gray-50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+      <div
+        id="reviewsGrid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+      ></div>
+
+      <div class="text-center mt-10">
+
+        <button
+          id="loadMoreBtn"
+          onclick="loadMoreReviews()"
+          class="btn-gold"
+        >
+          Load More Reviews →
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+    <!-- ══════════════════════════════════════════════
+     PAGE 5: PAST PROJECTS
+══════════════════════════════════════════════ -->
+    <div id="page-projects" class="page">
+      <div class="bg-gray-900 py-16 relative overflow-hidden">
+        <div
+          class="absolute inset-0"
+          style="
+            background: url(&quot;https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1200&q=80&quot;)
+              center/cover;
+            opacity: 0.2;
+          "
+        ></div>
+        <div
+          class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6"
+          style="padding-top: 120px"
+        >
+          <div class="eyebrow mb-2" style="color: #29b6f6">Our Portfolio</div>
+          <h1 class="section-title-w mb-3">
+            Past Projects.<br /><span class="text-yellow-400"
+              >Real Results.</span
+            >
+          </h1>
+          <p class="text-white/60 text-sm max-w-xl">
+            Every project is a testament to our commitment to quality and
+            customer satisfaction.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-yellow-400 py-8">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+        >
+          <div>
+            <div class="font-poppins font-900 text-2xl text-dark">150+</div>
+            <div class="text-dark/70 text-xs mt-1">Total Projects</div>
+          </div>
+          <div>
+            <div class="font-poppins font-900 text-2xl text-dark">2 MW+</div>
+            <div class="text-dark/70 text-xs mt-1">Total Capacity</div>
+          </div>
+          <div>
+            <div class="font-poppins font-900 text-2xl text-dark">₱2M+</div>
+            <div class="text-dark/70 text-xs mt-1">Monthly Savings</div>
+          </div>
+          <div>
+            <div class="font-poppins font-900 text-2xl text-dark">10+</div>
+            <div class="text-dark/70 text-xs mt-1">Cities Served</div>
+          </div>
+        </div>
+      </div>
+
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div
+            id="projectsGrid"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          ></div>
+          <div class="text-center mt-10 reveal">
+            <button
+              id="loadMoreProjectsBtn"
+              onclick="loadMoreProjects()"
+              class="btn-gold"
+            >
+              Load More Projects →
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+<!-- ══════════════════════════════════════════════
+     PAGE 6: CONTACT
+══════════════════════════════════════════════ -->
+    <div id="page-contact" class="page">
+      <div
+        class="py-16 relative overflow-hidden"
+        style="background: linear-gradient(135deg, #0d1b2a, #1a1a2e)"
+      >
+        <div
+          class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6"
+          style="padding-top: 100px"
+        >
+          <div class="eyebrow mb-2" style="color: #29b6f6">Get In Touch</div>
+          <h1 class="section-title-w mb-3">
+            Let's Power a<br /><span class="text-yellow-400"
+              >Better Tomorrow</span
+            >
+          </h1>
+          <p class="text-white/60 text-sm">
+            Have questions or ready to go solar? We're here to help!
+          </p>
+        </div>
+      </div>
+
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="reveal">
+              <h2 class="font-poppins font-800 text-gray-800 text-2xl mb-2">
+                Have Questions?
+              </h2>
+              <p class="text-gray-500 text-sm mb-8">
+                We're always happy to help. Reach out through any of the
+                channels below.
+              </p>
+              <div class="space-y-5 mb-8">
+                <div
+                  class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 card-shadow"
+                >
+                  <div
+                    class="w-11 h-11 bg-yellow-400 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                  >
+                    📞
+                  </div>
+                  <div>
+                    <div class="text-gray-400 text-xs mb-0.5">Call Us</div>
+                    <div class="font-poppins font-700 text-gray-800 text-sm">
+                      0991 353 0296
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 card-shadow"
+                >
+                  <div
+                    class="w-11 h-11 bg-yellow-400 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                  >
+                    ✉️
+                  </div>
+                  <div>
+                    <div class="text-gray-400 text-xs mb-0.5">Email Us</div>
+                    <div class="font-poppins font-700 text-gray-800 text-sm">
+                      ace.avillanoza16@gmail.com
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 card-shadow"
+                >
+                  <div
+                    class="w-11 h-11 bg-yellow-400 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                  >
+                    📍
+                  </div>
+                  <div>
+                    <div class="text-gray-400 text-xs mb-0.5">Visit Us</div>
+                    <div class="font-poppins font-700 text-gray-800 text-sm">
+                      Pag Asa Tibag, Tarlac City, Philippines
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 card-shadow"
+                >
+                  <div
+                    class="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                  >
+                    🕒
+                  </div>
+                  <div>
+                    <div class="text-gray-400 text-xs mb-0.5">Office Hours</div>
+                    <div class="font-poppins font-700 text-gray-800 text-sm">
+                      Mon–Fri: 8:00 AM – 5:00 PM
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-xl overflow-hidden border border-gray-100" style="height: 13rem;">
+                <iframe
+                  src="https://www.google.com/maps?q=15.478385877450464,120.55311193208408&z=16&output=embed"
+                  width="100%"
+                  height="100%"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Office Location Map"
+                ></iframe>
+              </div>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=15.478385877450464,120.55311193208408" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 mt-3 text-blue-700 text-sm font-600 hover:underline">📍 Get Directions</a>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl p-8 border border-gray-100 card-shadow reveal"
+              style="transition-delay: 0.1s"
+            >
+              <h3 class="font-poppins font-700 text-gray-800 text-xl mb-2">
+                Send Us a Message
+              </h3>
+              <p class="text-gray-400 text-xs mb-6">
+                We usually respond within 24 hours.
+              </p>
+              <div class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      id="contactName"
+                      placeholder="Juan Dela Cruz"
+                      class="form-input"
+                    />
+                  </div>
+                  <div>
+                    <label class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="contactPhone"
+                      placeholder="09XX XXX XXXX"
+                      class="form-input"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="you@email.com"
+                    class="form-input"
+                  />
+                </div>
+                <div>
+                  <!-- <label class="form-label">Service Interested In</label>
+            <select class="form-input" style="appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;">
+                <option value="">Select a service…</option>
+                <option>Solar Installation</option>
+                <option>Sungrow Hybrid Inverter</option>
+                <option>Sungrow Battery System</option>
+                <option>Hybrid Solar + Battery</option>
+                <option>Consultation &amp; Design</option>
+                <option>Maintenance &amp; Support</option>
+              </select>-->
+                </div>
+                <div>
+                  <label class="form-label">Your Message</label>
+                  <textarea
+                    rows="4"
+                    id="contactMessage"
+                    placeholder="Tell us about your energy needs, property size, or current electric bill…"
+                    class="form-input resize-none"
+                  ></textarea>
+                </div>
+                <button
+                  id="contactSubmitBtn"
+                  onclick="submitContact(this)"
+                  class="btn-gold w-full justify-center"
+                >
+                  Send Message
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                  </svg>
+                </button>
+                <p
+                  id="contactSuccess"
+                  class="hidden text-center text-green-600 text-sm font-600 bg-green-50 rounded-xl p-3"
+                >
+                  ✓ Message sent! We'll get back to you soon.
+                </p>
+                <p
+                  id="contactError"
+                  class="hidden text-center text-red-600 text-sm font-600 bg-red-50 rounded-xl p-3"
+                >
+                  ✗ Something went wrong. Please try again or contact us directly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+     SHARED FOOTER TEMPLATE
+══════════════════════════════════════════════ -->
+    <template id="footerTemplate">
+      <!-- MOBILE footer: simplified -->
+      <footer class="bg-gray-900 pt-14 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/10"
+          >
+            <div>
+              <div class="flex items-center gap-2 mb-4">
+                <div
+                  class="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4">
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="4"
+                      stroke="#1A1A2E"
+                      stroke-width="2"
+                    />
+                    <line
+                      x1="12"
+                      y1="2"
+                      x2="12"
+                      y2="5"
+                      stroke="#1A1A2E"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <line
+                      x1="12"
+                      y1="19"
+                      x2="12"
+                      y2="22"
+                      stroke="#1A1A2E"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <line
+                      x1="2"
+                      y1="12"
+                      x2="5"
+                      y2="12"
+                      stroke="#1A1A2E"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <line
+                      x1="19"
+                      y1="12"
+                      x2="22"
+                      y2="12"
+                      stroke="#1A1A2E"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <span class="font-poppins font-800 text-white text-sm"
+                  >SUN<span class="text-yellow-400">LIMITED</span></span
+                >
+              </div>
+              <p class="text-white/40 text-xs leading-relaxed mb-4">
+                Committed to providing reliable solar energy solutions for a
+                sustainable future.
+              </p>
+              <div class="flex gap-3">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100090419641465"
+                  target="_blank"
+                  class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-white/60 hover:bg-yellow-400 hover:text-dark transition-all text-xs"
+                  >f</a
+                >
+                <a
+                  href="#"
+                  class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-white/60 hover:bg-yellow-400 hover:text-dark transition-all text-xs"
+                  >ig</a
+                >
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-poppins font-700 text-white text-xs uppercase tracking-widest mb-4"
+              >
+                Quick Links
+              </div>
+              <div class="space-y-2">
+                <button
+                  onclick="showPage('home')"
+                  class="block text-white/45 text-xs hover:text-yellow-400 transition-colors"
+                >
+                  Home
+                </button>
+                <button
+                  onclick="showPage('about')"
+                  class="block text-white/45 text-xs hover:text-yellow-400 transition-colors"
+                >
+                  About Us
+                </button>
+                <button
+                  onclick="showPage('services')"
+                  class="block text-white/45 text-xs hover:text-yellow-400 transition-colors"
+                >
+                  Services
+                </button>
+                <button
+                  onclick="showPage('reviews')"
+                  class="block text-white/45 text-xs hover:text-yellow-400 transition-colors"
+                >
+                  Reviews
+                </button>
+                <button
+                  onclick="showPage('projects')"
+                  class="block text-white/45 text-xs hover:text-yellow-400 transition-colors"
+                >
+                  Past Projects
+                </button>
+                <button
+                  onclick="showPage('contact')"
+                  class="block text-white/45 text-xs hover:text-yellow-400 transition-colors"
+                >
+                  Contact
+                </button>
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-poppins font-700 text-white text-xs uppercase tracking-widest mb-4"
+              >
+                Our Services
+              </div>
+              <div class="space-y-2 text-white/45 text-xs">
+                <div>Solar Installation</div>
+                <div>Hybrid Solar + Battery</div>
+                <div>Inverter &amp; Battery Supply</div>
+                <div>Maintenance &amp; Support</div>
+                <div>Consultation &amp; Design</div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-poppins font-700 text-white text-xs uppercase tracking-widest mb-4"
+              >
+                Contact Info
+              </div>
+              <div class="space-y-3 text-xs text-white/45">
+                <div class="flex gap-2">
+                  <span class="text-yellow-400">📧</span>
+                  ace.avillanoza16@gmail.com
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-yellow-400">📞</span> 0991 353 0296
+                </div>
+                <div class="flex gap-2">
+                  <span class="text-yellow-400">📍</span> Pag Asa Tibag, Tarlac
+                  City, Philippines
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center pt-6 gap-3"
+          >
+            <div class="text-white/25 text-xs">
+              © 2024 SunLimited. All Rights Reserved.
+            </div>
+            <div class="text-white/25 text-xs">Sun is the limit.</div>
+          </div>
+        </div>
+      </footer>
+    </template>
+
+    <!-- External JS -->
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      
+     </script>
+<script>
+  emailjs.init({
+    publicKey: "vLrVPjjBWK813O_GS", // <-- replace with your EmailJS public key
+  });
+</script>
+    <script src="main.js"></script>
+  </body>
+</html>
