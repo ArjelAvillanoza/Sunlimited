@@ -276,16 +276,16 @@ const allProjects = [
   },
   {
     title: '12kW  Hybrid Solar Installation', loc: 'Brgy. Ayao-Iyao Itaas, Lemery, Batangas',
-    savings: '₱15,200/mo', img: 'SUNLIMITED-PICS/PROJECT 1.JPG',
+    savings: '₱15,200/mo', img: 'SUNLIMITED-PICS/PROJECT-1.jpg',
     panels: '18pcs 620W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 1.JPG','SUNLIMITED-PICS/PROJECT 1 SYSTEM.jpg'],
+    images: ['SUNLIMITED-PICS/PROJECT-1.jpg','SUNLIMITED-PICS/PROJECT-1-SYSTEM.jpg'],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
     title: '8kw Hybrid Solar Installation', loc: 'Brgy. Matatalaib, Tarlac City',
-    savings: '₱9,100/mo', img: 'SUNLIMITED-PICS/PROJECT 2.JPG',
+    savings: '₱9,100/mo', img: 'SUNLIMITED-PICS/PROJECT 2.jpg',
     panels: '16pcs 640W Jinko Bi-facial Solar Panels', battery: '330Ah Sunlimited LiFePO4 Battery',
-    images: ['SUNLIMITED-PICS/PROJECT 2.JPG','SUNLIMITED-PICS/PROJECT 2 SYSTEM.JPG',],
+    images: ['SUNLIMITED-PICS/PROJECT 2.jpg','SUNLIMITED-PICS/PROJECT 2 SYSTEM.jpg',],
     imageLabels: ['Installation Photo', 'Sungrow Inverter']
   },
   {
