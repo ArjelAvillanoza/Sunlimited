@@ -998,7 +998,7 @@ const SERVICE_DETAILS = {
       'Technical and installation support',
       'Firmware updates and monitoring setup'
     ],
-    image: 'sunlimited pics/23.jpg',
+    image: 'SUNLIMITED-PICS/23.jpg',
     icon: `<svg width="24" height="24" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#F5A800"/></svg>`
   },
   'hybrid-solar-battery': {
