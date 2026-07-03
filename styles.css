@@ -238,6 +238,55 @@ padding:12px 18px;
 
 }
 
+/* ── MUSIC TOGGLE ── */
+.music-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #1A1A2E;
+  border: 2.5px solid #F5A800;
+  color: #F5A800;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 500;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.music-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 28px rgba(245, 168, 0, 0.35);
+}
+
+.music-btn-mobile {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #F5A800;
+  background: transparent;
+  color: #F5A800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.music-btn-mobile:hover {
+  background: rgba(245, 168, 0, 0.12);
+}
+
+/* Muted state — dim + slash through the icon */
+.music-fab.muted,
+.music-btn-mobile.muted {
+  opacity: 0.55;
+}
+
 /* Why Choose Section */
 .why-section {
   position: relative;

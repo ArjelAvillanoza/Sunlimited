@@ -145,6 +145,47 @@ function initReveal() {
 
 window.addEventListener('scroll', initReveal, { passive: true });
 
+
+/*MUSIC*/
+/* ── MUSIC TOGGLE ── */
+const bgMusic = document.getElementById('bgMusic');
+let musicPlaying = false;
+
+const NOTE_ICON = `<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3" fill="currentColor" stroke="none"/><circle cx="18" cy="16" r="3" fill="currentColor" stroke="none"/>`;
+const NOTE_MUTED_ICON = NOTE_ICON + `<line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`;
+
+// Each entry pairs a button id with its icon id — add more rows here if you add more buttons
+const MUSIC_TOGGLES = [
+  { btnId: 'musicBtnDesktop', iconId: 'musicIconDesktop' },
+  { btnId: 'musicBtnMobile',  iconId: 'musicIconMobile'  },
+];
+
+function toggleMusic() {
+  if (!bgMusic) return;
+
+  if (musicPlaying) {
+    bgMusic.pause();
+  } else {
+    bgMusic.play().catch(() => {});
+  }
+  musicPlaying = !musicPlaying;
+  updateMusicUI();
+}
+window.toggleMusic = toggleMusic;
+
+function updateMusicUI() {
+  const iconHTML = musicPlaying ? NOTE_ICON : NOTE_MUTED_ICON;
+
+  MUSIC_TOGGLES.forEach(({ btnId, iconId }) => {
+    const btn = document.getElementById(btnId);
+    const icon = document.getElementById(iconId);
+    if (icon) icon.innerHTML = iconHTML;
+    if (btn) btn.classList.toggle('muted', !musicPlaying);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', updateMusicUI);
+/*MUSIC*/
 /* ── REVIEWS DATA ── */
 /* ── REVIEWS DATA ── */
 const allReviews = [
