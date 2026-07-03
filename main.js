@@ -184,7 +184,46 @@ function updateMusicUI() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', updateMusicUI);
+// Try to autoplay immediately; if blocked, start on the user's first real interaction
+function attemptAutoplay() {
+  if (!bgMusic) {
+    console.log('[music] bgMusic element not found');
+    return;
+  }
+
+  console.log('[music] attempting immediate autoplay...');
+  bgMusic.play().then(() => {
+    console.log('[music] immediate autoplay SUCCEEDED');
+    musicPlaying = true;
+    updateMusicUI();
+  }).catch((err) => {
+    console.log('[music] immediate autoplay blocked:', err.name, err.message);
+    console.log('[music] waiting for first user interaction...');
+
+    const startOnInteraction = (e) => {
+      console.log('[music] interaction detected:', e.type);
+      bgMusic.play().then(() => {
+        console.log('[music] play() after interaction SUCCEEDED');
+        musicPlaying = true;
+        updateMusicUI();
+      }).catch((err2) => {
+        console.log('[music] play() after interaction FAILED:', err2.name, err2.message);
+      });
+      ['click', 'keydown', 'touchend'].forEach(evt =>
+        document.removeEventListener(evt, startOnInteraction)
+      );
+    };
+    ['click', 'keydown', 'touchend'].forEach(evt =>
+      document.addEventListener(evt, startOnInteraction, { once: true })
+    );
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateMusicUI();
+  attemptAutoplay();
+});
+/*MUSIC*/
 /*MUSIC*/
 /* ── REVIEWS DATA ── */
 /* ── REVIEWS DATA ── */
